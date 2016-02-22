@@ -1,0 +1,80 @@
+object Form1: TForm1
+  Left = 192
+  Top = 114
+  Width = 546
+  Height = 327
+  Caption = 'Form1'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 200
+    Top = 16
+    Width = 196
+    Height = 13
+    Caption = 'Incrementare decrementare contor'
+    Color = clBtnFace
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 232
+    Top = 56
+    Width = 104
+    Height = 19
+    Caption = 'i scade in Edit1'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
+  end
+  object Edit1: TEdit
+    Left = 104
+    Top = 112
+    Width = 89
+    Height = 21
+    AutoSelect = False
+    TabOrder = 0
+    Text = '000'
+  end
+  object UP: TButton
+    Left = 32
+    Top = 56
+    Width = 73
+    Height = 25
+    Caption = 'UP'
+    TabOrder = 1
+    OnClick = UPClick
+  end
+  object DOWN: TButton
+    Left = 32
+    Top = 160
+    Width = 73
+    Height = 25
+    Caption = 'DOWN'
+    TabOrder = 2
+    OnClick = DOWNClick
+  end
+  object Exit: TButton
+    Left = 400
+    Top = 240
+    Width = 73
+    Height = 25
+    Caption = 'Exit'
+    TabOrder = 3
+    OnClick = ExitClick
+  end
+end

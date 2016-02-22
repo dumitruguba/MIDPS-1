@@ -1,0 +1,110 @@
+object Form1: TForm1
+  Left = 251
+  Top = 114
+  Width = 411
+  Height = 371
+  Caption = 'Form1'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 80
+    Top = 24
+    Width = 243
+    Height = 13
+    Caption = 'Realizarea unui cronometru  in C++ Builder'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 144
+    Top = 160
+    Width = 236
+    Height = 24
+    Caption = 'C++Builder CRONOMETRU'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -21
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+  end
+  object START: TButton
+    Left = 24
+    Top = 224
+    Width = 65
+    Height = 25
+    Caption = 'START'
+    TabOrder = 0
+  end
+  object STOP: TButton
+    Left = 24
+    Top = 256
+    Width = 65
+    Height = 25
+    Caption = 'STOP'
+    TabOrder = 1
+  end
+  object ZERO: TButton
+    Left = 24
+    Top = 288
+    Width = 65
+    Height = 25
+    Caption = 'ZERO'
+    TabOrder = 2
+  end
+  object Exit: TButton
+    Left = 312
+    Top = 304
+    Width = 65
+    Height = 25
+    Caption = 'Exit'
+    TabOrder = 3
+  end
+  object Edit1: TEdit
+    Left = 216
+    Top = 112
+    Width = 161
+    Height = 21
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 4
+    Text = 'Edit1'
+  end
+  object Edit2: TEdit
+    Left = 120
+    Top = 248
+    Width = 257
+    Height = 37
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 5
+    Text = 'Edit2'
+  end
+  object Timer1: TTimer
+    Left = 24
+    Top = 96
+  end
+  object Timer2: TTimer
+    Left = 24
+    Top = 136
+  end
+end
