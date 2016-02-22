@@ -49,12 +49,17 @@ void __fastcall TForm1::Timer2Timer(TObject *Sender)
      fin = Rect(1, 0, PaintBox1->Width-3, PaintBox1->Height);
      PaintBox1->Canvas->CopyRect(fin, PaintBox1->Canvas, init);
 
+      
+     init = Rect(1, 1, 9, 9);
+     for(int i=0; i<18; i++){
+         fin = Rect(1, 1+8*i, 9, 9+8*i);
+         PaintBox1->Canvas->CopyRect(fin, PaintBox1->Canvas, init);
+     }
+
+
      init = Rect(1, 0, 8, PaintBox1->Height);
-     fin = Rect(PaintBox1->Width-8, 0,
-                PaintBox1->Width-1, PaintBox1->Height);
+     fin = Rect(PaintBox1->Width-8, 0, PaintBox1->Width-1, PaintBox1->Height);
      PaintBox1->Canvas->CopyRect(fin, PaintBox1->Canvas, init);
-
-
 
 }
 //---------------------------------------------------------------------------

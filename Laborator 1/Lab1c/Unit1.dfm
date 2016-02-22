@@ -3,6 +3,7 @@ object Form1: TForm1
   Top = 114
   Width = 468
   Height = 373
+  AlphaBlend = True
   BorderWidth = 1
   Caption = 'Form1'
   Color = clBtnFace
@@ -44,7 +45,7 @@ object Form1: TForm1
     Color = clBlack
     ParentColor = False
     ParentShowHint = False
-    ShowHint = True
+    ShowHint = False
   end
   object Edit1: TEdit
     Left = 152

@@ -49,10 +49,18 @@ void __fastcall TForm1::Timer2Timer(TObject *Sender)
      fin = Rect(1, 0, PaintBox1->Width-3, PaintBox1->Height);
      PaintBox1->Canvas->CopyRect(fin, PaintBox1->Canvas, init);
 
+      
+     init = Rect(1, 1, 9, 9);
+     for(int i=0; i<18; i++){
+         fin = Rect(1, 1+8*i, 9, 9+8*i);
+         PaintBox1->Canvas->CopyRect(fin, PaintBox1->Canvas, init);
+     }
+
+
      init = Rect(1, 0, 8, PaintBox1->Height);
-     fin = Rect(PaintBox1->Width-8, 0,
-                PaintBox1->Width-1, PaintBox1->Height);
+     fin = Rect(PaintBox1->Width-8, 0, PaintBox1->Width-1, PaintBox1->Height);
      PaintBox1->Canvas->CopyRect(fin, PaintBox1->Canvas, init);
+
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm1::StartClick(TObject *Sender)
@@ -65,7 +73,7 @@ void __fastcall TForm1::StartClick(TObject *Sender)
 void __fastcall TForm1::PaintBox1Paint(TObject *Sender)
 {
      rect = Rect(0, 0, PaintBox1->Width, PaintBox1->Height);
-                                                  
+
      PaintBox1->Canvas->Pen->Color = clBlack;
      PaintBox1->Canvas->Brush->Color = clBtnFace;
      PaintBox1->Canvas->Rectangle(rect);
@@ -90,4 +98,5 @@ void __fastcall TForm1::StopClick(TObject *Sender)
      Panel1->Height = Panel2->Height;
 }
 //---------------------------------------------------------------------------
+
 
