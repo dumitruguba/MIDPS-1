@@ -124,6 +124,7 @@ object Form1: TForm1
   end
   object Timer2: TTimer
     Enabled = False
+    Interval = 500
     OnTimer = Timer2Timer
     Left = 16
     Top = 64
