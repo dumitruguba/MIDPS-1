@@ -8,3 +8,5 @@
 # Built files
 *.obj
 *.exe
+**/bin
+**/obj
