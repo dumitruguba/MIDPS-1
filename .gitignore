@@ -1,0 +1,10 @@
+# C++Builder autosave files:
+*.~bpr
+*.~ddp
+*.~dfm
+*.~cpp
+*.~h
+
+# Built files
+*.obj
+*.exe
