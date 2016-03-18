@@ -242,5 +242,25 @@ namespace source
                textBox1.Text = num1.ToString();
           }
 
+          private void button_equal_Click(object sender, EventArgs e)
+          {
+               if (textBox1.TextLength > 0)
+               {
+                    if (operation != string.Empty)
+                    {
+                         Calculate();
+                         input_new = true;
+                    }                    
+               }
+          }
+
+          private void button_ce_Click(object sender, EventArgs e)
+          {
+               textBox1.Text = string.Empty;
+               operation = string.Empty;
+               input_new = true;
+               zecimal = false;
+          }
+
      }
 }
