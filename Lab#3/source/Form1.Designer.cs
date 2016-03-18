@@ -1,6 +1,6 @@
 ﻿namespace source
 {
-     partial class Form1
+     partial class Calculator
      {
           /// <summary>
           /// Required designer variable.
@@ -28,7 +28,6 @@
           /// </summary>
           private void InitializeComponent()
           {
-               this.label1 = new System.Windows.Forms.Label();
                this.textBox1 = new System.Windows.Forms.TextBox();
                this.button1 = new System.Windows.Forms.Button();
                this.button2 = new System.Windows.Forms.Button();
@@ -41,27 +40,21 @@
                this.button9 = new System.Windows.Forms.Button();
                this.button0 = new System.Windows.Forms.Button();
                this.button_point = new System.Windows.Forms.Button();
+               this.button_plus = new System.Windows.Forms.Button();
+               this.button_minus = new System.Windows.Forms.Button();
+               this.button_mul = new System.Windows.Forms.Button();
+               this.button_div = new System.Windows.Forms.Button();
+               this.label1 = new System.Windows.Forms.Label();
                this.SuspendLayout();
-               // 
-               // label1
-               // 
-               this.label1.AutoSize = true;
-               this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-               this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-               this.label1.Location = new System.Drawing.Point(12, 9);
-               this.label1.Name = "label1";
-               this.label1.Size = new System.Drawing.Size(37, 15);
-               this.label1.TabIndex = 0;
-               this.label1.Text = "label1";
                // 
                // textBox1
                // 
                this.textBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
                this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-               this.textBox1.Location = new System.Drawing.Point(12, 34);
+               this.textBox1.Location = new System.Drawing.Point(48, 34);
                this.textBox1.MaxLength = 31;
                this.textBox1.Name = "textBox1";
-               this.textBox1.Size = new System.Drawing.Size(268, 20);
+               this.textBox1.Size = new System.Drawing.Size(201, 20);
                this.textBox1.TabIndex = 1;
                this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
                this.textBox1.Click += new System.EventHandler(this.textBox1_TextChanged);
@@ -177,11 +170,63 @@
                this.button_point.UseVisualStyleBackColor = true;
                this.button_point.Click += new System.EventHandler(this.button_point_Click);
                // 
-               // Form1
+               // button_plus
+               // 
+               this.button_plus.Location = new System.Drawing.Point(198, 86);
+               this.button_plus.Name = "button_plus";
+               this.button_plus.Size = new System.Drawing.Size(32, 32);
+               this.button_plus.TabIndex = 13;
+               this.button_plus.Text = "+";
+               this.button_plus.UseVisualStyleBackColor = true;
+               this.button_plus.Click += new System.EventHandler(this.button_plus_Click);
+               // 
+               // button_minus
+               // 
+               this.button_minus.Location = new System.Drawing.Point(198, 124);
+               this.button_minus.Name = "button_minus";
+               this.button_minus.Size = new System.Drawing.Size(32, 32);
+               this.button_minus.TabIndex = 14;
+               this.button_minus.Text = "-";
+               this.button_minus.UseVisualStyleBackColor = true;
+               // 
+               // button_mul
+               // 
+               this.button_mul.Location = new System.Drawing.Point(198, 162);
+               this.button_mul.Name = "button_mul";
+               this.button_mul.Size = new System.Drawing.Size(32, 32);
+               this.button_mul.TabIndex = 15;
+               this.button_mul.Text = "*";
+               this.button_mul.UseVisualStyleBackColor = true;
+               // 
+               // button_div
+               // 
+               this.button_div.Location = new System.Drawing.Point(198, 200);
+               this.button_div.Name = "button_div";
+               this.button_div.Size = new System.Drawing.Size(32, 32);
+               this.button_div.TabIndex = 16;
+               this.button_div.Text = "/";
+               this.button_div.UseVisualStyleBackColor = true;
+               // 
+               // label1
+               // 
+               this.label1.AutoSize = true;
+               this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+               this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+               this.label1.Location = new System.Drawing.Point(12, 9);
+               this.label1.Name = "label1";
+               this.label1.Size = new System.Drawing.Size(37, 15);
+               this.label1.TabIndex = 0;
+               this.label1.Text = "label1";
+               // 
+               // Calculator
                // 
                this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
                this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
                this.ClientSize = new System.Drawing.Size(292, 266);
+               this.Controls.Add(this.button_div);
+               this.Controls.Add(this.button_mul);
+               this.Controls.Add(this.button_minus);
+               this.Controls.Add(this.button_plus);
                this.Controls.Add(this.button_point);
                this.Controls.Add(this.button0);
                this.Controls.Add(this.button9);
@@ -196,8 +241,8 @@
                this.Controls.Add(this.textBox1);
                this.Controls.Add(this.label1);
                this.Cursor = System.Windows.Forms.Cursors.Arrow;
-               this.Name = "Form1";
-               this.Text = "Form1";
+               this.Name = "Calculator";
+               this.Text = "Calculator";
                this.ResumeLayout(false);
                this.PerformLayout();
 
@@ -205,7 +250,6 @@
 
           #endregion
 
-          private System.Windows.Forms.Label label1;
           private System.Windows.Forms.TextBox textBox1;
           private System.Windows.Forms.Button button1;
           private System.Windows.Forms.Button button2;
@@ -218,6 +262,11 @@
           private System.Windows.Forms.Button button9;
           private System.Windows.Forms.Button button0;
           private System.Windows.Forms.Button button_point;
+          private System.Windows.Forms.Button button_plus;
+          private System.Windows.Forms.Button button_minus;
+          private System.Windows.Forms.Button button_mul;
+          private System.Windows.Forms.Button button_div;
+          private System.Windows.Forms.Label label1;
      }
 }
 

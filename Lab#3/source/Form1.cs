@@ -9,16 +9,17 @@ using System.Windows.Forms;
 
 namespace source
 {
-     public partial class Form1 : Form
+     public partial class Calculator : Form
      {
           private double num1, num2;
           private bool input_new = true;
           private bool zecimal = false;
+          private string operation = string.Empty;
 
           [System.Runtime.InteropServices.DllImport("user32.dll")]
           static extern bool HideCaret(IntPtr hWnd);
 
-          public Form1()
+          public Calculator()
           {
                InitializeComponent();
                this.ActiveControl = label1;
@@ -178,7 +179,39 @@ namespace source
                }
           }
 
+          private void button_plus_Click(object sender, EventArgs e)
+          {
+               if (textBox1.TextLength > 0)
+               {
+                    if (operation == string.Empty)
+                    {
+                         num1 = System.Double.Parse(textBox1.Text);
+                    }
+                    else 
+                    {
+                         Calculate();
+                    }
 
-          
+                    operation = "Plus";
+                    input_new = true;
+               }
+          }
+
+          private void Calculate()
+          {
+               if (!input_new)
+               {
+                    num2 = System.Double.Parse(textBox1.Text);
+               }
+
+               switch (operation)
+               {
+                    case "Plus": 
+                         num1 += num2;
+                         break;
+               }
+
+               textBox1.Text = num1.ToString();
+          }
      }
 }

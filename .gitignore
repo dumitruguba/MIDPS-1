@@ -10,3 +10,7 @@
 *.exe
 **/bin
 **/obj
+
+# Other
+*.suo
+*.user
