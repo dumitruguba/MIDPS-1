@@ -198,6 +198,7 @@
                this.button_mul.TabIndex = 15;
                this.button_mul.Text = "*";
                this.button_mul.UseVisualStyleBackColor = true;
+               this.button_mul.Click += new System.EventHandler(this.button_mul_Click);
                // 
                // button_div
                // 
@@ -207,6 +208,7 @@
                this.button_div.TabIndex = 16;
                this.button_div.Text = "/";
                this.button_div.UseVisualStyleBackColor = true;
+               this.button_div.Click += new System.EventHandler(this.button_div_Click);
                // 
                // label1
                // 

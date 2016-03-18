@@ -196,6 +196,7 @@ namespace source
 
                          input_new = true;
                     }
+
                     operation = "Plus";
                }
           }
@@ -217,7 +218,53 @@ namespace source
 
                          input_new = true;
                     }
-                         operation = "Minus";
+
+                    operation = "Minus";
+               }
+          }
+
+          private void button_mul_Click(object sender, EventArgs e)
+          {
+               if (textBox1.TextLength > 0)
+               {
+                    if (!input_new)
+                    {
+                         if (operation == string.Empty)
+                         {
+                              num1 = System.Double.Parse(textBox1.Text);
+                         }
+                         else
+                         {
+                              Calculate();
+                         }
+
+                         input_new = true;
+                    }
+
+                    operation = "Multiply";
+               }
+
+          }
+
+          private void button_div_Click(object sender, EventArgs e)
+          {
+               if (textBox1.TextLength > 0)
+               {
+                    if (!input_new)
+                    {
+                         if (operation == string.Empty)
+                         {
+                              num1 = System.Double.Parse(textBox1.Text);
+                         }
+                         else
+                         {
+                              Calculate();
+                         }
+
+                         input_new = true;
+                    }
+
+                    operation = "Division";
                }
           }
 
@@ -236,6 +283,14 @@ namespace source
 
                     case "Minus":
                          num1 -= num2;
+                         break;
+
+                    case "Multiply":
+                         num1 *= num2;
+                         break;
+
+                    case "Division":
+                         num1 /= num2;
                          break;
                }
 
