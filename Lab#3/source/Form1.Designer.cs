@@ -188,6 +188,7 @@
                this.button_minus.TabIndex = 14;
                this.button_minus.Text = "-";
                this.button_minus.UseVisualStyleBackColor = true;
+               this.button_minus.Click += new System.EventHandler(this.button_minus_Click);
                // 
                // button_mul
                // 

@@ -183,17 +183,41 @@ namespace source
           {
                if (textBox1.TextLength > 0)
                {
-                    if (operation == string.Empty)
+                    if (!input_new)
                     {
-                         num1 = System.Double.Parse(textBox1.Text);
-                    }
-                    else 
-                    {
-                         Calculate();
-                    }
+                         if (operation == string.Empty)
+                         {
+                              num1 = System.Double.Parse(textBox1.Text);
+                         }
+                         else
+                         {
+                              Calculate();
+                         }
 
+                         input_new = true;
+                    }
                     operation = "Plus";
-                    input_new = true;
+               }
+          }
+
+          private void button_minus_Click(object sender, EventArgs e)
+          {
+               if (textBox1.TextLength > 0)
+               {
+                    if (!input_new)
+                    {
+                         if (operation == string.Empty)
+                         {
+                              num1 = System.Double.Parse(textBox1.Text);
+                         }
+                         else
+                         {
+                              Calculate();
+                         }
+
+                         input_new = true;
+                    }
+                         operation = "Minus";
                }
           }
 
@@ -206,12 +230,17 @@ namespace source
 
                switch (operation)
                {
-                    case "Plus": 
+                    case "Plus":
                          num1 += num2;
+                         break;
+
+                    case "Minus":
+                         num1 -= num2;
                          break;
                }
 
                textBox1.Text = num1.ToString();
           }
+
      }
 }
