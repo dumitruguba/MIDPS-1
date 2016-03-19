@@ -24,7 +24,6 @@ namespace source
           {
                InitializeComponent();
                HideCaret(textBox1.Handle);
-
           }
 
           private void textBox1_TextChanged(object sender, EventArgs e)
@@ -41,6 +40,7 @@ namespace source
                          clear_everything();
                     }
                     textBox1.Text = button0.Text;
+                    input_new = false;
                }
                else if (textBox1.TextLength <= textBox1.MaxLength)
                {
@@ -50,7 +50,7 @@ namespace source
 
           private void button1_Click(object sender, EventArgs e)
           {
-               if (input_new)
+               if (input_new || textBox1.Text == "0")
                {
                     if (equal_pressed)
                     {
@@ -67,7 +67,7 @@ namespace source
 
           private void button2_Click(object sender, EventArgs e)
           {
-               if (input_new)
+               if (input_new || textBox1.Text == "0")
                {
                     if (equal_pressed)
                     {
@@ -84,7 +84,7 @@ namespace source
 
           private void button3_Click(object sender, EventArgs e)
           {
-               if (input_new)
+               if (input_new || textBox1.Text == "0")
                {
                     if (equal_pressed)
                     {
@@ -101,7 +101,7 @@ namespace source
 
           private void button4_Click(object sender, EventArgs e)
           {
-               if (input_new)
+               if (input_new || textBox1.Text == "0")
                {
                     if (equal_pressed)
                     {
@@ -118,7 +118,7 @@ namespace source
 
           private void button5_Click(object sender, EventArgs e)
           {
-               if (input_new)
+               if (input_new || textBox1.Text == "0")
                {
                     if (equal_pressed)
                     {
@@ -135,7 +135,7 @@ namespace source
 
           private void button6_Click(object sender, EventArgs e)
           {
-               if (input_new)
+               if (input_new || textBox1.Text == "0")
                {
                     if (equal_pressed)
                     {
@@ -152,7 +152,7 @@ namespace source
 
           private void button7_Click(object sender, EventArgs e)
           {
-               if (input_new)
+               if (input_new || textBox1.Text == "0")
                {
                     if (equal_pressed)
                     {
@@ -169,7 +169,7 @@ namespace source
 
           private void button8_Click(object sender, EventArgs e)
           {
-               if (input_new)
+               if (input_new || textBox1.Text == "0")
                {
                     if (equal_pressed)
                     {
@@ -186,7 +186,7 @@ namespace source
 
           private void button9_Click(object sender, EventArgs e)
           {
-               if (input_new)
+               if (input_new || textBox1.Text == "0")
                {
                     if (equal_pressed)
                     {
@@ -205,7 +205,7 @@ namespace source
           {
                if (!zecimal)
                {
-                    if (input_new)
+                    if (input_new || textBox1.Text == "0")
                     {
                          if (equal_pressed)
                          {
@@ -296,7 +296,6 @@ namespace source
                     num2 = System.Double.Parse(textBox1.Text);
                     operation = "Multiply";
                }
-
           }
 
           private void button_div_Click(object sender, EventArgs e)
@@ -318,8 +317,11 @@ namespace source
                          zecimal = false;
                     }
 
+                    if (textBox1.TextLength > 0)
+                    {
+                         num2 = System.Double.Parse(textBox1.Text);
+                    }
                     equal_pressed = false;
-                    num2 = System.Double.Parse(textBox1.Text);
                     operation = "Division";
                }
           }
@@ -347,7 +349,6 @@ namespace source
                     num2 = System.Double.Parse(textBox1.Text);
                     operation = "Power";
                }
-
           }
 
           private void button_sqr_Click(object sender, EventArgs e)
@@ -361,7 +362,10 @@ namespace source
                     operation = "SquareRoot";
                     Calculate();
 
-                    num2 = System.Double.Parse(textBox1.Text);
+                    if (textBox1.TextLength > 0)
+                    {
+                         num2 = System.Double.Parse(textBox1.Text);
+                    }
                }
           }
 
@@ -387,6 +391,12 @@ namespace source
                          break;
 
                     case "Division":
+                         if (num2 == 0)
+                         {
+                              num1 = num2;
+                              clear_everything();
+                              return;
+                         }
                          num1 /= num2;
                          break;
 
@@ -395,6 +405,11 @@ namespace source
                          break;
 
                     case "SquareRoot":
+                         if (num2 < 0)
+                         {
+                              clear_everything();
+                              return;
+                         }
                          num1 = System.Math.Sqrt(num2);
                          operation = string.Empty;
                          break;
@@ -471,6 +486,5 @@ namespace source
                zecimal = false;
                equal_pressed = false;
           }
-
      }
 }
