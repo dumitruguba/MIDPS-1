@@ -242,6 +242,7 @@ namespace source
                          zecimal = false;
                     }
 
+                    equal_pressed = false;
                     num2 = System.Double.Parse(textBox1.Text);
                     operation = "Plus";
                }
@@ -266,6 +267,7 @@ namespace source
                          zecimal = false;
                     }
 
+                    equal_pressed = false;
                     num2 = System.Double.Parse(textBox1.Text);
                     operation = "Minus";
                }
@@ -290,6 +292,7 @@ namespace source
                          zecimal = false;
                     }
 
+                    equal_pressed = false;
                     num2 = System.Double.Parse(textBox1.Text);
                     operation = "Multiply";
                }
@@ -315,6 +318,7 @@ namespace source
                          zecimal = false;
                     }
 
+                    equal_pressed = false;
                     num2 = System.Double.Parse(textBox1.Text);
                     operation = "Division";
                }
@@ -339,6 +343,7 @@ namespace source
                          zecimal = false;
                     }
 
+                    equal_pressed = false;
                     num2 = System.Double.Parse(textBox1.Text);
                     operation = "Power";
                }
@@ -434,9 +439,28 @@ namespace source
                }
           }
 
-          private void button_ce_Click(object sender, EventArgs e)
+          private void button_c_Click(object sender, EventArgs e)
           {
                clear_everything();
+          }
+
+          private void button_ce_Click(object sender, EventArgs e)
+          {
+               if (!input_new)
+               {
+                    textBox1.Text = "0";
+               }
+          }
+
+          private void button_bckspc_Click(object sender, EventArgs e)
+          {
+               if (!input_new)
+               {
+                    if (textBox1.TextLength > 0)
+                    {
+                         textBox1.Text = textBox1.Text.Remove(textBox1.TextLength - 1);
+                    }
+               }
           }
 
           private void clear_everything()
@@ -446,7 +470,6 @@ namespace source
                input_new = true;
                zecimal = false;
                equal_pressed = false;
-               
           }
 
      }
