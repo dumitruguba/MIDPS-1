@@ -48,6 +48,8 @@
                this.button_sign = new System.Windows.Forms.Button();
                this.button_equal = new System.Windows.Forms.Button();
                this.button_ce = new System.Windows.Forms.Button();
+               this.button_pow = new System.Windows.Forms.Button();
+               this.button_sqr = new System.Windows.Forms.Button();
                this.SuspendLayout();
                // 
                // textBox1
@@ -57,6 +59,7 @@
                this.textBox1.Location = new System.Drawing.Point(48, 34);
                this.textBox1.MaxLength = 31;
                this.textBox1.Name = "textBox1";
+               this.textBox1.ReadOnly = true;
                this.textBox1.Size = new System.Drawing.Size(201, 20);
                this.textBox1.TabIndex = 1;
                this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -189,7 +192,7 @@
                this.button_minus.Name = "button_minus";
                this.button_minus.Size = new System.Drawing.Size(32, 32);
                this.button_minus.TabIndex = 14;
-               this.button_minus.Text = "-";
+               this.button_minus.Text = "−";
                this.button_minus.UseVisualStyleBackColor = true;
                this.button_minus.Click += new System.EventHandler(this.button_minus_Click);
                // 
@@ -233,6 +236,7 @@
                this.button_sign.Text = "+/-";
                this.button_sign.UseVisualStyleBackColor = true;
                this.button_sign.Click += new System.EventHandler(this.button_sign_Click);
+               // 
                // button_equal
                // 
                this.button_equal.Location = new System.Drawing.Point(236, 200);
@@ -253,11 +257,34 @@
                this.button_ce.UseVisualStyleBackColor = true;
                this.button_ce.Click += new System.EventHandler(this.button_ce_Click);
                // 
+               // button_pow
+               // 
+               this.button_pow.Location = new System.Drawing.Point(236, 124);
+               this.button_pow.Name = "button_pow";
+               this.button_pow.Size = new System.Drawing.Size(32, 32);
+               this.button_pow.TabIndex = 19;
+               this.button_pow.Text = "^";
+               this.button_pow.UseVisualStyleBackColor = true;
+               this.button_pow.Click += new System.EventHandler(this.button_pow_Click);
+               // 
+               // button_sqr
+               // 
+               this.button_sqr.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+               this.button_sqr.Location = new System.Drawing.Point(236, 162);
+               this.button_sqr.Name = "button_sqr";
+               this.button_sqr.Size = new System.Drawing.Size(32, 32);
+               this.button_sqr.TabIndex = 20;
+               this.button_sqr.Text = "√¯";
+               this.button_sqr.UseVisualStyleBackColor = true;
+               this.button_sqr.Click += new System.EventHandler(this.button_sqr_Click);
+               // 
                // Calculator
                // 
                this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
                this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
                this.ClientSize = new System.Drawing.Size(292, 266);
+               this.Controls.Add(this.button_sqr);
+               this.Controls.Add(this.button_pow);
                this.Controls.Add(this.button_sign);
                this.Controls.Add(this.button_ce);
                this.Controls.Add(this.button_equal);
@@ -279,7 +306,9 @@
                this.Controls.Add(this.textBox1);
                this.Controls.Add(this.label1);
                this.Cursor = System.Windows.Forms.Cursors.Arrow;
+               this.Location = new System.Drawing.Point(500, 500);
                this.Name = "Calculator";
+               this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
                this.Text = "Calculator";
                this.ResumeLayout(false);
                this.PerformLayout();
@@ -308,6 +337,8 @@
           private System.Windows.Forms.Button button_sign;
           private System.Windows.Forms.Button button_equal;
           private System.Windows.Forms.Button button_ce;
+          private System.Windows.Forms.Button button_pow;
+          private System.Windows.Forms.Button button_sqr;
      }
 }
 

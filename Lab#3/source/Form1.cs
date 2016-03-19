@@ -268,6 +268,44 @@ namespace source
                }
           }
 
+          private void button_pow_Click(object sender, EventArgs e)
+          {
+               if (textBox1.TextLength > 0)
+               {
+                    if (!input_new)
+                    {
+                         if (operation == string.Empty)
+                         {
+                              num1 = System.Double.Parse(textBox1.Text);
+                         }
+                         else
+                         {
+                              Calculate();
+                         }
+
+                         input_new = true;
+                    }
+
+                    operation = "Power";
+               }
+
+          }
+
+          private void button_sqr_Click(object sender, EventArgs e)
+          {
+               if (textBox1.TextLength > 0)
+               {
+                    input_new = true;
+
+                    num2 = System.Double.Parse(textBox1.Text);
+
+                    operation = "SquareRoot";
+                    Calculate();
+
+                    num2 = System.Double.Parse(textBox1.Text);
+               }
+          }
+
           private void Calculate()
           {
                if (!input_new)
@@ -291,6 +329,14 @@ namespace source
 
                     case "Division":
                          num1 /= num2;
+                         break;
+
+                    case "Power":
+                         num1 = System.Math.Pow(num1, num2);
+                         break;
+
+                    case "SquareRoot":
+                         num1 = System.Math.Sqrt(num2);
                          break;
                }
 
