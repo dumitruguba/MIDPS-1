@@ -14,6 +14,7 @@ namespace source
           private double num1, num2;
           private bool input_new = true;
           private bool zecimal = false;
+          private bool equal_pressed = false;
           private string operation = string.Empty;
 
           [System.Runtime.InteropServices.DllImport("user32.dll")]
@@ -22,7 +23,6 @@ namespace source
           public Calculator()
           {
                InitializeComponent();
-               this.ActiveControl = label1;
                HideCaret(textBox1.Handle);
 
           }
@@ -36,9 +36,13 @@ namespace source
           {
                if (input_new)
                {
+                    if (equal_pressed)
+                    {
+                         clear_everything();
+                    }
                     textBox1.Text = button0.Text;
                }
-               else if (textBox1.TextLength < 32)
+               else if (textBox1.TextLength <= textBox1.MaxLength)
                {
                     textBox1.Text += button0.Text;
                }
@@ -48,10 +52,14 @@ namespace source
           {
                if (input_new)
                {
+                    if (equal_pressed)
+                    {
+                         clear_everything();
+                    }
                     textBox1.Text = button1.Text;
                     input_new = false;
                }
-               else if (textBox1.TextLength < 32)
+               else if (textBox1.TextLength <= textBox1.MaxLength)
                {
                     textBox1.Text += button1.Text;
                }
@@ -61,10 +69,14 @@ namespace source
           {
                if (input_new)
                {
+                    if (equal_pressed)
+                    {
+                         clear_everything();
+                    }
                     textBox1.Text = button2.Text;
                     input_new = false;
                }
-               else if (textBox1.TextLength < 32)
+               else if (textBox1.TextLength <= textBox1.MaxLength)
                {
                     textBox1.Text += button2.Text;
                }
@@ -74,10 +86,14 @@ namespace source
           {
                if (input_new)
                {
+                    if (equal_pressed)
+                    {
+                         clear_everything();
+                    }
                     textBox1.Text = button3.Text;
                     input_new = false;
                }
-               else if (textBox1.TextLength < 32)
+               else if (textBox1.TextLength <= textBox1.MaxLength)
                {
                     textBox1.Text += button3.Text;
                }
@@ -87,10 +103,14 @@ namespace source
           {
                if (input_new)
                {
+                    if (equal_pressed)
+                    {
+                         clear_everything();
+                    }
                     textBox1.Text = button4.Text;
                     input_new = false;
                }
-               else if (textBox1.TextLength < 32)
+               else if (textBox1.TextLength <= textBox1.MaxLength)
                {
                     textBox1.Text += button4.Text;
                }
@@ -100,10 +120,14 @@ namespace source
           {
                if (input_new)
                {
+                    if (equal_pressed)
+                    {
+                         clear_everything();
+                    }
                     textBox1.Text = button5.Text;
                     input_new = false;
                }
-               else if (textBox1.TextLength < 32)
+               else if (textBox1.TextLength <= textBox1.MaxLength)
                {
                     textBox1.Text += button5.Text;
                }
@@ -113,10 +137,14 @@ namespace source
           {
                if (input_new)
                {
+                    if (equal_pressed)
+                    {
+                         clear_everything();
+                    }
                     textBox1.Text = button6.Text;
                     input_new = false;
                }
-               else if (textBox1.TextLength < 32)
+               else if (textBox1.TextLength <= textBox1.MaxLength)
                {
                     textBox1.Text += button6.Text;
                }
@@ -126,10 +154,14 @@ namespace source
           {
                if (input_new)
                {
+                    if (equal_pressed)
+                    {
+                         clear_everything();
+                    }
                     textBox1.Text = button7.Text;
                     input_new = false;
                }
-               else if (textBox1.TextLength < 32)
+               else if (textBox1.TextLength <= textBox1.MaxLength)
                {
                     textBox1.Text += button7.Text;
                }
@@ -139,10 +171,14 @@ namespace source
           {
                if (input_new)
                {
+                    if (equal_pressed)
+                    {
+                         clear_everything();
+                    }
                     textBox1.Text = button8.Text;
                     input_new = false;
                }
-               else if(textBox1.TextLength<32)
+               else if (textBox1.TextLength <= textBox1.MaxLength)
                {
                     textBox1.Text += button8.Text;
                }
@@ -152,10 +188,14 @@ namespace source
           {
                if (input_new)
                {
+                    if (equal_pressed)
+                    {
+                         clear_everything();
+                    }
                     textBox1.Text = button9.Text;
                     input_new = false;
                }
-               else if(textBox1.TextLength<32)
+               else if (textBox1.TextLength <= textBox1.MaxLength)
                {
                     textBox1.Text += button9.Text;
                }
@@ -165,16 +205,20 @@ namespace source
           {
                if (!zecimal)
                {
-                    if (textBox1.TextLength > 0 && textBox1.TextLength < 32 && textBox1.Text != "0")
+                    if (input_new)
                     {
-                         textBox1.Text += button_point.Text;
-                         zecimal = true;
-                    }
-                    else if (input_new)
-                    {
+                         if (equal_pressed)
+                         {
+                              clear_everything();
+                         }
                          textBox1.Text = "0,";
                          zecimal = true;
                          input_new = false;
+                    }
+                    else if (textBox1.TextLength > 0 && textBox1.TextLength < 32 && textBox1.Text != "0")
+                    {
+                         textBox1.Text += button_point.Text;
+                         zecimal = true;
                     }
                }
           }
@@ -195,8 +239,10 @@ namespace source
                          }
 
                          input_new = true;
+                         zecimal = false;
                     }
 
+                    num2 = System.Double.Parse(textBox1.Text);
                     operation = "Plus";
                }
           }
@@ -217,8 +263,10 @@ namespace source
                          }
 
                          input_new = true;
+                         zecimal = false;
                     }
 
+                    num2 = System.Double.Parse(textBox1.Text);
                     operation = "Minus";
                }
           }
@@ -239,8 +287,10 @@ namespace source
                          }
 
                          input_new = true;
+                         zecimal = false;
                     }
 
+                    num2 = System.Double.Parse(textBox1.Text);
                     operation = "Multiply";
                }
 
@@ -262,8 +312,10 @@ namespace source
                          }
 
                          input_new = true;
+                         zecimal = false;
                     }
 
+                    num2 = System.Double.Parse(textBox1.Text);
                     operation = "Division";
                }
           }
@@ -284,8 +336,10 @@ namespace source
                          }
 
                          input_new = true;
+                         zecimal = false;
                     }
 
+                    num2 = System.Double.Parse(textBox1.Text);
                     operation = "Power";
                }
 
@@ -337,6 +391,7 @@ namespace source
 
                     case "SquareRoot":
                          num1 = System.Math.Sqrt(num2);
+                         operation = string.Empty;
                          break;
                }
 
@@ -373,16 +428,25 @@ namespace source
                     {
                          Calculate();
                          input_new = true;
+                         zecimal = false;
+                         equal_pressed = true;
                     }                    
                }
           }
 
           private void button_ce_Click(object sender, EventArgs e)
           {
+               clear_everything();
+          }
+
+          private void clear_everything()
+          {
                textBox1.Text = string.Empty;
                operation = string.Empty;
                input_new = true;
                zecimal = false;
+               equal_pressed = false;
+               
           }
 
      }
