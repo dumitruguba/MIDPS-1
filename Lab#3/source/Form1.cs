@@ -297,5 +297,27 @@ namespace source
                textBox1.Text = num1.ToString();
           }
 
+          private void button_sign_Click(object sender, EventArgs e)
+          {
+               if (textBox1.TextLength > 0)
+               {
+                    if (!input_new)
+                    {
+                         if (textBox1.Text.StartsWith("-"))
+                         {
+                              textBox1.Text = textBox1.Text.Remove(0, 1);
+                         }
+                         else
+                         {
+                              textBox1.Text = "-" + textBox1.Text;
+                         }
+                    }
+                    else
+                    {
+                         textBox1.Text = "0";
+                    }
+               }
+          }
+
      }
 }

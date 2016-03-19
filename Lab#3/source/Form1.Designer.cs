@@ -45,6 +45,7 @@
                this.button_mul = new System.Windows.Forms.Button();
                this.button_div = new System.Windows.Forms.Button();
                this.label1 = new System.Windows.Forms.Label();
+               this.button_sign = new System.Windows.Forms.Button();
                this.SuspendLayout();
                // 
                // textBox1
@@ -221,11 +222,22 @@
                this.label1.TabIndex = 0;
                this.label1.Text = "label1";
                // 
+               // button_sign
+               // 
+               this.button_sign.Location = new System.Drawing.Point(84, 200);
+               this.button_sign.Name = "button_sign";
+               this.button_sign.Size = new System.Drawing.Size(32, 32);
+               this.button_sign.TabIndex = 17;
+               this.button_sign.Text = "+/-";
+               this.button_sign.UseVisualStyleBackColor = true;
+               this.button_sign.Click += new System.EventHandler(this.button_sign_Click);
+               // 
                // Calculator
                // 
                this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
                this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
                this.ClientSize = new System.Drawing.Size(292, 266);
+               this.Controls.Add(this.button_sign);
                this.Controls.Add(this.button_div);
                this.Controls.Add(this.button_mul);
                this.Controls.Add(this.button_minus);
@@ -270,6 +282,7 @@
           private System.Windows.Forms.Button button_mul;
           private System.Windows.Forms.Button button_div;
           private System.Windows.Forms.Label label1;
+          private System.Windows.Forms.Button button_sign;
      }
 }
 
