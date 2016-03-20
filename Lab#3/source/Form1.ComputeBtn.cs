@@ -24,6 +24,10 @@ namespace source
                          input_new = true;
                          zecimal = false;
                     }
+                    else if (equal_pressed)
+                    {
+                         num1 = System.Double.Parse(textBox1.Text);
+                    }
 
                     equal_pressed = false;
                     num2 = System.Double.Parse(textBox1.Text);
@@ -49,6 +53,10 @@ namespace source
 
                          input_new = true;
                          zecimal = false;
+                    }
+                    else if (equal_pressed)
+                    {
+                         num1 = System.Double.Parse(textBox1.Text);
                     }
 
                     equal_pressed = false;
@@ -76,6 +84,10 @@ namespace source
                          input_new = true;
                          zecimal = false;
                     }
+                    else if (equal_pressed)
+                    {
+                         num1 = System.Double.Parse(textBox1.Text);
+                    }
 
                     equal_pressed = false;
                     num2 = System.Double.Parse(textBox1.Text);
@@ -102,7 +114,11 @@ namespace source
                          input_new = true;
                          zecimal = false;
                     }
-
+                    else if (equal_pressed)
+                    {
+                         num1 = System.Double.Parse(textBox1.Text);
+                    }
+                    
                     if (textBox1.TextLength > 0)
                     {
                          num2 = System.Double.Parse(textBox1.Text);
@@ -158,6 +174,21 @@ namespace source
                this.ActiveControl = label1;
           }
 
+          private void button_equal_Click(object sender, EventArgs e)
+          {
+               if (textBox1.TextLength > 0)
+               {
+                    if (operation != string.Empty)
+                    {
+                         Calculate();
+                         input_new = true;
+                         zecimal = false;
+                         equal_pressed = true;
+                    }
+               }
+               this.ActiveControl = label1;
+          }
+
           private void Calculate()
           {
                if (!input_new)
@@ -207,16 +238,13 @@ namespace source
                textBox1.Text = num1.ToString();
           }
 
-          private void button_equal_Click(object sender, EventArgs e)
+          private void button_bckspc_Click(object sender, EventArgs e)
           {
-               if (textBox1.TextLength > 0)
+               if (!input_new)
                {
-                    if (operation != string.Empty)
+                    if (textBox1.TextLength > 0)
                     {
-                         Calculate();
-                         input_new = true;
-                         zecimal = false;
-                         equal_pressed = true;
+                         textBox1.Text = textBox1.Text.Remove(textBox1.TextLength - 1);
                     }
                }
                this.ActiveControl = label1;
@@ -233,18 +261,6 @@ namespace source
                if (!input_new)
                {
                     textBox1.Text = "0";
-               }
-               this.ActiveControl = label1;
-          }
-
-          private void button_bckspc_Click(object sender, EventArgs e)
-          {
-               if (!input_new)
-               {
-                    if (textBox1.TextLength > 0)
-                    {
-                         textBox1.Text = textBox1.Text.Remove(textBox1.TextLength - 1);
-                    }
                }
                this.ActiveControl = label1;
           }

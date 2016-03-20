@@ -76,6 +76,7 @@
                // 
                // button1
                // 
+               this.button1.ForeColor = System.Drawing.Color.Blue;
                this.button1.Location = new System.Drawing.Point(12, 163);
                this.button1.Name = "button1";
                this.button1.Size = new System.Drawing.Size(32, 32);
@@ -87,6 +88,7 @@
                // 
                // button2
                // 
+               this.button2.ForeColor = System.Drawing.Color.Blue;
                this.button2.Location = new System.Drawing.Point(50, 163);
                this.button2.Name = "button2";
                this.button2.Size = new System.Drawing.Size(32, 32);
@@ -98,6 +100,7 @@
                // 
                // button3
                // 
+               this.button3.ForeColor = System.Drawing.Color.Blue;
                this.button3.Location = new System.Drawing.Point(88, 163);
                this.button3.Name = "button3";
                this.button3.Size = new System.Drawing.Size(32, 32);
@@ -109,6 +112,7 @@
                // 
                // button4
                // 
+               this.button4.ForeColor = System.Drawing.Color.Blue;
                this.button4.Location = new System.Drawing.Point(12, 125);
                this.button4.Name = "button4";
                this.button4.Size = new System.Drawing.Size(32, 32);
@@ -120,6 +124,7 @@
                // 
                // button5
                // 
+               this.button5.ForeColor = System.Drawing.Color.Blue;
                this.button5.Location = new System.Drawing.Point(50, 125);
                this.button5.Name = "button5";
                this.button5.Size = new System.Drawing.Size(32, 32);
@@ -131,6 +136,7 @@
                // 
                // button6
                // 
+               this.button6.ForeColor = System.Drawing.Color.Blue;
                this.button6.Location = new System.Drawing.Point(88, 125);
                this.button6.Name = "button6";
                this.button6.Size = new System.Drawing.Size(32, 32);
@@ -142,6 +148,7 @@
                // 
                // button7
                // 
+               this.button7.ForeColor = System.Drawing.Color.Blue;
                this.button7.Location = new System.Drawing.Point(12, 87);
                this.button7.Name = "button7";
                this.button7.Size = new System.Drawing.Size(32, 32);
@@ -153,6 +160,7 @@
                // 
                // button8
                // 
+               this.button8.ForeColor = System.Drawing.Color.Blue;
                this.button8.Location = new System.Drawing.Point(50, 87);
                this.button8.Name = "button8";
                this.button8.Size = new System.Drawing.Size(32, 32);
@@ -164,6 +172,7 @@
                // 
                // button9
                // 
+               this.button9.ForeColor = System.Drawing.Color.Blue;
                this.button9.Location = new System.Drawing.Point(88, 87);
                this.button9.Name = "button9";
                this.button9.Size = new System.Drawing.Size(32, 32);
@@ -175,6 +184,7 @@
                // 
                // button0
                // 
+               this.button0.ForeColor = System.Drawing.Color.Blue;
                this.button0.Location = new System.Drawing.Point(50, 201);
                this.button0.Name = "button0";
                this.button0.Size = new System.Drawing.Size(32, 32);
@@ -186,6 +196,7 @@
                // 
                // button_point
                // 
+               this.button_point.ForeColor = System.Drawing.Color.Blue;
                this.button_point.Location = new System.Drawing.Point(88, 201);
                this.button_point.Name = "button_point";
                this.button_point.Size = new System.Drawing.Size(32, 32);
@@ -197,6 +208,7 @@
                // 
                // button_plus
                // 
+               this.button_plus.ForeColor = System.Drawing.Color.Red;
                this.button_plus.Location = new System.Drawing.Point(126, 87);
                this.button_plus.Name = "button_plus";
                this.button_plus.Size = new System.Drawing.Size(32, 32);
@@ -208,6 +220,7 @@
                // 
                // button_minus
                // 
+               this.button_minus.ForeColor = System.Drawing.Color.Red;
                this.button_minus.Location = new System.Drawing.Point(126, 125);
                this.button_minus.Name = "button_minus";
                this.button_minus.Size = new System.Drawing.Size(32, 32);
@@ -219,6 +232,7 @@
                // 
                // button_mul
                // 
+               this.button_mul.ForeColor = System.Drawing.Color.Red;
                this.button_mul.Location = new System.Drawing.Point(126, 163);
                this.button_mul.Name = "button_mul";
                this.button_mul.Size = new System.Drawing.Size(32, 32);
@@ -230,6 +244,7 @@
                // 
                // button_div
                // 
+               this.button_div.ForeColor = System.Drawing.Color.Red;
                this.button_div.Location = new System.Drawing.Point(126, 201);
                this.button_div.Name = "button_div";
                this.button_div.Size = new System.Drawing.Size(32, 32);
@@ -241,6 +256,7 @@
                // 
                // button_sign
                // 
+               this.button_sign.ForeColor = System.Drawing.Color.Blue;
                this.button_sign.Location = new System.Drawing.Point(12, 201);
                this.button_sign.Name = "button_sign";
                this.button_sign.Size = new System.Drawing.Size(32, 32);
@@ -252,6 +268,7 @@
                // 
                // button_equal
                // 
+               this.button_equal.ForeColor = System.Drawing.Color.Red;
                this.button_equal.Location = new System.Drawing.Point(164, 163);
                this.button_equal.Name = "button_equal";
                this.button_equal.Size = new System.Drawing.Size(32, 70);
@@ -263,6 +280,7 @@
                // 
                // button_c
                // 
+               this.button_c.ForeColor = System.Drawing.Color.Red;
                this.button_c.Location = new System.Drawing.Point(145, 49);
                this.button_c.Name = "button_c";
                this.button_c.Size = new System.Drawing.Size(51, 32);
@@ -274,6 +292,7 @@
                // 
                // button_pow
                // 
+               this.button_pow.ForeColor = System.Drawing.Color.Blue;
                this.button_pow.Location = new System.Drawing.Point(164, 87);
                this.button_pow.Name = "button_pow";
                this.button_pow.Size = new System.Drawing.Size(32, 32);
@@ -286,6 +305,7 @@
                // button_sqr
                // 
                this.button_sqr.Font = new System.Drawing.Font("Arial", 9.75F);
+               this.button_sqr.ForeColor = System.Drawing.Color.Blue;
                this.button_sqr.Location = new System.Drawing.Point(164, 125);
                this.button_sqr.Name = "button_sqr";
                this.button_sqr.Size = new System.Drawing.Size(32, 32);
@@ -297,6 +317,7 @@
                // 
                // button_ce
                // 
+               this.button_ce.ForeColor = System.Drawing.Color.Red;
                this.button_ce.Location = new System.Drawing.Point(88, 49);
                this.button_ce.Name = "button_ce";
                this.button_ce.Size = new System.Drawing.Size(51, 32);
@@ -308,6 +329,7 @@
                // 
                // button_bckspc
                // 
+               this.button_bckspc.ForeColor = System.Drawing.Color.Red;
                this.button_bckspc.Location = new System.Drawing.Point(12, 49);
                this.button_bckspc.Name = "button_bckspc";
                this.button_bckspc.Size = new System.Drawing.Size(70, 32);
@@ -367,6 +389,7 @@
                this.Text = "Calculator";
                this.Activated += new System.EventHandler(this.Calculator_Load);
                this.Load += new System.EventHandler(this.Calculator_Load);
+               this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Calculator_KeyDown);
                this.ResumeLayout(false);
                this.PerformLayout();
 

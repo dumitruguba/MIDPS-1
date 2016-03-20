@@ -7,13 +7,14 @@ namespace source
      {
           private void button0_Click(object sender, EventArgs e)
           {
-               if (input_new)
+               if (input_new || textBox1.Text == "0")
                {
                     if (equal_pressed)
                     {
                          clear_everything();
                     }
                     textBox1.Text = button0.Text;
+                    input_new = false;
                }
                else if (textBox1.TextLength <= textBox1.MaxLength)
                {
@@ -211,8 +212,8 @@ namespace source
           {
                if (textBox1.TextLength > 0)
                {
-                    if (!input_new)
-                    {
+                    //if (!input_new)
+                    //{
                          if (textBox1.Text.StartsWith("-"))
                          {
                               textBox1.Text = textBox1.Text.Remove(0, 1);
@@ -221,11 +222,16 @@ namespace source
                          {
                               textBox1.Text = "-" + textBox1.Text;
                          }
-                    }
+                    /*}
                     else
                     {
                          textBox1.Text = "0";
-                    }
+                    }*/
+                         if (!equal_pressed)
+                         {
+                              //num1 = -num1;
+                         input_new = false;
+                         }
                }
                this.ActiveControl = label1;
           }
