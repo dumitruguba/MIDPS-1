@@ -93,6 +93,10 @@ namespace source
                     case Keys.M:
                          button_sign.PerformClick();
                          break;
+
+                    case Keys.Decimal:
+                         button_point.PerformClick();
+                         break;
                }       
           }
      }

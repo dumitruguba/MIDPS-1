@@ -29,8 +29,11 @@ namespace source
                          num1 = System.Double.Parse(textBox1.Text);
                     }
 
+                    if (textBox1.TextLength > 0)
+                    {
+                         num2 = System.Double.Parse(textBox1.Text);
+                    }
                     equal_pressed = false;
-                    num2 = System.Double.Parse(textBox1.Text);
                     operation = "Plus";
                }
                this.ActiveControl = label1;
@@ -59,8 +62,11 @@ namespace source
                          num1 = System.Double.Parse(textBox1.Text);
                     }
 
+                    if (textBox1.TextLength > 0)
+                    {
+                         num2 = System.Double.Parse(textBox1.Text);
+                    }
                     equal_pressed = false;
-                    num2 = System.Double.Parse(textBox1.Text);
                     operation = "Minus";
                }
                this.ActiveControl = label1;
@@ -89,8 +95,11 @@ namespace source
                          num1 = System.Double.Parse(textBox1.Text);
                     }
 
+                    if (textBox1.TextLength > 0)
+                    {
+                         num2 = System.Double.Parse(textBox1.Text);
+                    }
                     equal_pressed = false;
-                    num2 = System.Double.Parse(textBox1.Text);
                     operation = "Multiply";
                }
                this.ActiveControl = label1;
@@ -148,8 +157,11 @@ namespace source
                          zecimal = false;
                     }
 
+                    if (textBox1.TextLength > 0)
+                    {
+                         num2 = System.Double.Parse(textBox1.Text);
+                    }
                     equal_pressed = false;
-                    num2 = System.Double.Parse(textBox1.Text);
                     operation = "Power";
                }
                this.ActiveControl = label1;
@@ -191,7 +203,7 @@ namespace source
 
           private void Calculate()
           {
-               if (!input_new)
+               if (!input_new && textBox1.TextLength > 0)
                {
                     num2 = System.Double.Parse(textBox1.Text);
                }

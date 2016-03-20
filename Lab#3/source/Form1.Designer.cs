@@ -304,14 +304,14 @@
                // 
                // button_sqr
                // 
-               this.button_sqr.Font = new System.Drawing.Font("Arial", 9.75F);
+               this.button_sqr.Font = new System.Drawing.Font("MS Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
                this.button_sqr.ForeColor = System.Drawing.Color.Blue;
                this.button_sqr.Location = new System.Drawing.Point(164, 125);
                this.button_sqr.Name = "button_sqr";
                this.button_sqr.Size = new System.Drawing.Size(32, 32);
                this.button_sqr.TabIndex = 7;
                this.button_sqr.TabStop = false;
-               this.button_sqr.Text = "√¯";
+               this.button_sqr.Text = "√";
                this.button_sqr.UseVisualStyleBackColor = true;
                this.button_sqr.Click += new System.EventHandler(this.button_sqr_Click);
                // 

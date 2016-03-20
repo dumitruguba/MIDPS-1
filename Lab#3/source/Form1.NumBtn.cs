@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Media;
 using System.Windows.Forms;
 
 namespace source
@@ -13,6 +14,12 @@ namespace source
                     {
                          clear_everything();
                     }
+
+                    if (textBox1.Text == "0")
+                    {
+                         SystemSounds.Beep.Play();
+                    }
+
                     textBox1.Text = button0.Text;
                     input_new = false;
                }
@@ -20,6 +27,11 @@ namespace source
                {
                     textBox1.Text += button0.Text;
                }
+               else
+               {
+                    SystemSounds.Beep.Play();
+               }
+
                this.ActiveControl = label1;
           }
 
@@ -38,6 +50,11 @@ namespace source
                {
                     textBox1.Text += button1.Text;
                }
+               else
+               {
+                    SystemSounds.Beep.Play();
+               }
+
                this.ActiveControl = label1;
           }
 
@@ -56,6 +73,11 @@ namespace source
                {
                     textBox1.Text += button2.Text;
                }
+               else
+               {
+                    SystemSounds.Beep.Play();
+               }
+
                this.ActiveControl = label1;
           }
 
@@ -74,6 +96,11 @@ namespace source
                {
                     textBox1.Text += button3.Text;
                }
+               else
+               {
+                    SystemSounds.Beep.Play();
+               }
+
                this.ActiveControl = label1;
           }
 
@@ -92,6 +119,11 @@ namespace source
                {
                     textBox1.Text += button4.Text;
                }
+               else
+               {
+                    SystemSounds.Beep.Play();
+               }
+
                this.ActiveControl = label1;
           }
 
@@ -110,6 +142,11 @@ namespace source
                {
                     textBox1.Text += button5.Text;
                }
+               else
+               {
+                    SystemSounds.Beep.Play();
+               }
+
                this.ActiveControl = label1;
           }
 
@@ -128,6 +165,11 @@ namespace source
                {
                     textBox1.Text += button6.Text;
                }
+               else
+               {
+                    SystemSounds.Beep.Play();
+               }
+
                this.ActiveControl = label1;
           }
 
@@ -146,6 +188,11 @@ namespace source
                {
                     textBox1.Text += button7.Text;
                }
+               else
+               {
+                    SystemSounds.Beep.Play();
+               }
+
                this.ActiveControl = label1;
           }
 
@@ -164,6 +211,11 @@ namespace source
                {
                     textBox1.Text += button8.Text;
                }
+               else
+               {
+                    SystemSounds.Beep.Play();
+               }
+
                this.ActiveControl = label1;
           }
 
@@ -182,6 +234,11 @@ namespace source
                {
                     textBox1.Text += button9.Text;
                }
+               else
+               {
+                    SystemSounds.Beep.Play();
+               }
+
                this.ActiveControl = label1;
           }
 
@@ -205,6 +262,11 @@ namespace source
                          zecimal = true;
                     }
                }
+               else
+               {
+                    SystemSounds.Beep.Play();
+               }
+
                this.ActiveControl = label1;
           }
 
@@ -212,27 +274,21 @@ namespace source
           {
                if (textBox1.TextLength > 0)
                {
-                    //if (!input_new)
-                    //{
-                         if (textBox1.Text.StartsWith("-"))
-                         {
-                              textBox1.Text = textBox1.Text.Remove(0, 1);
-                         }
-                         else
-                         {
-                              textBox1.Text = "-" + textBox1.Text;
-                         }
-                    /*}
+                    if (textBox1.Text.StartsWith("-"))
+                    {
+                         textBox1.Text = textBox1.Text.Remove(0, 1);
+                    }
                     else
                     {
-                         textBox1.Text = "0";
-                    }*/
-                         if (!equal_pressed)
-                         {
-                              //num1 = -num1;
+                         textBox1.Text = "-" + textBox1.Text;
+                    }
+
+                    if (!equal_pressed)
+                    {
                          input_new = false;
-                         }
+                    }
                }
+
                this.ActiveControl = label1;
           }
      }
