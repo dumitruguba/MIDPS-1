@@ -1,5 +1,5 @@
 ﻿## Lucrare de laborator #1
----
+
 ### Programul 1.a:
 Este necesar de a crea o formă cu trei butoane, o casetă de editare, şi doua etichete, folosind componente VCL. În caseta de editare se afişează un număr care poate fi modificat utilizînd doua dintre butoane, care incrementează sau decrementează numărul. Al trei-lea buton este folosit pentru a ieşi din program. O eticheta arată starea numărului din caseta de editare iar cealaltă etichetă conţine titlul programului.
 
