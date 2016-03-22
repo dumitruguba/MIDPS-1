@@ -57,7 +57,7 @@
                // 
                // textBox1
                // 
-               this.textBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+               this.textBox1.BackColor = System.Drawing.SystemColors.Window;
                this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
                this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
                this.textBox1.Location = new System.Drawing.Point(12, 12);
