@@ -1,0 +1,38 @@
+.Block{
+	padding-top: 0px;
+	margin: auto;		
+	width: 300px;
+	background: #FFFFFF;
+}
+.Page{			
+	width: 300px;
+	margin: auto;
+}
+.TopLeft{
+	height: 14px;
+	width: 14px;
+	float: left;
+	background: url(/images/left.png) no-repeat;
+}
+.TopCenter{
+	width: 272px;
+	height: 14px;
+	float: left;
+	background: #FFFFFF;
+}
+.TopRight{
+	height: 14px;
+	width: 14px;
+	float: left;
+	background: url(/images/right.png) no-repeat;
+}
+.Title{
+	text-align: center;
+	font: normal 23px Tahoma,Arial,Sans-serif;
+	line-height: 1.15em;
+}
+.TopBody{
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+}
