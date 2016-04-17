@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<title>Arhiva meteo, Chisinau</title>
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/ico" />
 <html>
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -43,7 +45,7 @@
 						<input type="date" name="date"  value="2016-04-16" min="2016-04-16" max="2016-04-23" onchange="showMeteo(this.value)" />
 					</form>
 				</div>
-				<div id="listofMeteo" />
+				<div class="Bottom" id="listofMeteo" />
 			</div>
 		</div>
 	</body>
