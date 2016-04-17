@@ -1,0 +1,85 @@
+.Block{
+	padding-bottom:14px;
+	float:left;
+}
+.Meteo{
+	margin: auto;
+	width: 295px;
+	padding-top: 26px;
+	padding-left: 0px;
+	float: left;
+	text-align: center;
+	font-family: "Arial", "Helvetica", sans-serif;
+}
+.Title1{
+	background: url(/images/dot.png) repeat-x;
+	color: #4A4A4A;
+	font: normal 9px Tahoma,Arial,Sans-serif;
+	line-height: 1.15em;
+	padding-bottom: 6px;
+	padding-top: 6px;
+	float: left;
+}
+.Title1_Time{
+	width: 125px;
+	float: left;
+}
+.Title1_Temperature{
+	width: 71px;
+	float: left;
+}
+.Title1_Pressure{
+	width:54px;
+	float:left;
+}
+.Title1_Wind{
+	width: 45px;
+	float: left;
+}
+
+.Title2{
+	width: 292px;
+	background: #E7E7E7 url(/images/dot.png) repeat-x;
+	color: #4A4A4A;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 3px 0 1px 4px;
+	float: left;
+	text-align: left;
+}
+
+.Row{
+	background: url(/images/dot.png) repeat-x;
+	width: 295px;
+	font-weight: bold;
+	font-size: 16px;
+	color: #5B5B5B;
+	height: 55px;
+	float: left;
+}
+.Time{
+	width: 56px;
+	padding: 20px 0 0 8px;
+	float: left;
+}
+.Image{
+	width: 60px;
+	padding-top: 8px;
+	float: left;
+}
+.Temperature{
+	width: 71px;
+	font-size: 24px;
+	padding-top: 15px;
+	float: left;
+}
+.Pressure{	
+	padding: 20px 0px 0px;
+	width: 54px;
+	float: left;
+}
+.Wind{
+	width: 45px;
+	float: left;
+	padding: 20px 0px 0px;
+}
