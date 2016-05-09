@@ -14,3 +14,8 @@
 # Other
 *.suo
 *.user
+
+/Lab#5/nbproject/
+/Lab#5/build/
+/Lab#5/dist/
+/Lab#5/build.xml
