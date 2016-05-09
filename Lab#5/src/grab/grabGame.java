@@ -62,10 +62,12 @@ public class grabGame {
 			if(bar.getY() > 320){		
 				host.buttonhit = false;
 				started = false;
+				host.nextGame();
 			}
 			else if(grabed && delta[1]==0){		
 				host.buttonhit = false;
 				started = false;
+				host.nextGame();
 			}
 		}
 		else{		

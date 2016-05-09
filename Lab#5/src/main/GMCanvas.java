@@ -2,6 +2,7 @@
 package main;
 
 import grab.grabGame;
+import pick.pickGame;
 import javax.microedition.lcdui.*;
 import javax.microedition.lcdui.Graphics;
 import javax.microedition.lcdui.game.GameCanvas;
@@ -14,7 +15,9 @@ public class GMCanvas extends GameCanvas  implements Runnable, CommandListener  
 	final Command exit = new Command("Exit", Command.EXIT, 1);
 		
 	grabGame grabgame;
+	pickGame pickgame;
 		
+	int gameNo;
 	public int delay = 10;
 	public boolean buttonhit;
 	private boolean buttonreleased;
@@ -34,6 +37,7 @@ public class GMCanvas extends GameCanvas  implements Runnable, CommandListener  
 	private void init() throws IOException {	
 		
 		grabgame = new grabGame(this);
+		pickgame = new pickGame(this);
 		
 		grabgame.loadgrabScene();
 		grabgame.start();
@@ -60,14 +64,25 @@ public class GMCanvas extends GameCanvas  implements Runnable, CommandListener  
 			else if (!((keyState & FIRE_PRESSED) != 0) && !buttonreleased){
 				buttonreleased = true;
 			}
-
-			grabgame.grabGameRun();						
-			if (buttonhit){
-				buttonhit = false;
-				grabgame.buttonhit();
+			switch(gameNo){
+				default :
+				case 0 :
+					grabgame.grabGameRun();						
+					if (buttonhit){
+						buttonhit = false;
+						grabgame.buttonhit();
+					}
+					grabgame.lm.paint(g, 0, 0);	
+					break;
+				case 1 :
+					pickgame.lm.paint(g, 0, 0);
+					pickgame.pickGameRun();		
+					if (buttonhit){
+						buttonhit = false;
+						pickgame.buttonhit();
+					}
+					break;
 			}
-			grabgame.lm.paint(g, 0, 0);	
-			
 			flushGraphics(0, 0, getWidth(), getHeight());
 			
 			try {
@@ -75,6 +90,26 @@ public class GMCanvas extends GameCanvas  implements Runnable, CommandListener  
 			} catch (InterruptedException ex) {
 				ex.printStackTrace();
 			}		
+		}
+	}
+	
+	public void nextGame(){		
+		switch(gameNo){			
+			default:
+			case 1 :
+				try {
+					grabgame.loadgrabScene();
+				} catch (IOException ex) {
+					ex.printStackTrace();
+				}
+				grabgame.start();
+				gameNo = 0;
+				break;
+			case 0 :
+				pickgame.loadScene();
+				pickgame.start();
+				gameNo = 1;
+				break;
 		}
 	}
 	
