@@ -11,13 +11,11 @@ public class GMMidlet extends MIDlet {
 
 	public GMMidlet() {
 		this.gcanvas = new GMCanvas(this);
-	}
-	
+	}	
 	
     public void startApp() {
 		Display.getDisplay(this).setCurrent(gcanvas);
-	}
-	
+	}	
 	
     public void pauseApp() {
     }
