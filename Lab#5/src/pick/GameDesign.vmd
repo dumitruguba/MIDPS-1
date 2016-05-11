@@ -207,7 +207,7 @@
             </Component>
             <Component componentID="17" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource">
                 <Property name="imageresourcecd.prop.name" typeID="Pjava.lang.String" value="Vbackground"/>
-                <Property name="imageresourcecd.prop.imagepath" typeID="Pjava.lang.String" value="V/bckg.png"/>
+                <Property name="imageresourcecd.prop.imagepath" typeID="Pjava.lang.String" value="V/grab/graphics/bckg.png"/>
             </Component>
             <Component componentID="21" typeID="Corg.netbeans.modules.vmd.game.model.ImageResource">
                 <Property name="imageresourcecd.prop.name" typeID="Pjava.lang.String" value="Vbckg"/>

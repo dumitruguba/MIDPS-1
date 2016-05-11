@@ -196,7 +196,7 @@ getNose_mid().setPosition(108, 141);//GEN-BEGIN:|16-updateLayerManager|1|16-post
 	public Image getBackground() throws java.io.IOException {//GEN-BEGIN:|17-getter|0|17-preInit
 		if (background == null) {//GEN-END:|17-getter|0|17-preInit
 			// write pre-init user code here
-background = Image.createImage("/bckg.png");//GEN-BEGIN:|17-getter|1|17-postInit
+background = Image.createImage("/grab/graphics/bckg.png");//GEN-BEGIN:|17-getter|1|17-postInit
 		}//GEN-END:|17-getter|1|17-postInit
 		// write post-init user code here
 return this.background;//GEN-BEGIN:|17-getter|2|
