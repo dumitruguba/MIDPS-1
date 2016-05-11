@@ -7,6 +7,7 @@ import javax.microedition.lcdui.*;
 import javax.microedition.lcdui.Graphics;
 import javax.microedition.lcdui.game.GameCanvas;
 import java.io.IOException;
+import jump.jumpGame;
 import spin.spinGame;
 
 public class GMCanvas extends GameCanvas  implements Runnable, CommandListener  {
@@ -18,6 +19,7 @@ public class GMCanvas extends GameCanvas  implements Runnable, CommandListener  
 	grabGame grabgame;
 	pickGame pickgame;
 	spinGame spingame;
+	jumpGame jumpgame;
 		
 	int gameNo;
 	public int delay = 10;
@@ -41,6 +43,7 @@ public class GMCanvas extends GameCanvas  implements Runnable, CommandListener  
 		grabgame = new grabGame(this);
 		pickgame = new pickGame(this);
 		spingame = new spinGame(getWidth(), getHeight(), this);
+		jumpgame = new jumpGame(this);
 		
 		grabgame.loadgrabScene();
 		grabgame.start();
@@ -93,7 +96,16 @@ public class GMCanvas extends GameCanvas  implements Runnable, CommandListener  
 					}	
 					spingame.spinGameRun();
 					break;
+				case 3 :
+					jumpgame.lm.paint(g, 0, 0);
+					if (buttonhit){
+						buttonhit = false;
+						jumpgame.buttonhit();
+					}
+					jumpgame.jumpGameRun();
+					break;
 			}
+			
 			flushGraphics(0, 0, getWidth(), getHeight());
 			
 			try {
@@ -107,7 +119,7 @@ public class GMCanvas extends GameCanvas  implements Runnable, CommandListener  
 	public void nextGame(){		
 		switch(gameNo){			
 			default:
-			case 2 :
+			case 3 :
 				try {
 					grabgame.loadgrabScene();
 				} catch (IOException ex) {
@@ -125,6 +137,11 @@ public class GMCanvas extends GameCanvas  implements Runnable, CommandListener  
 				spingame.LoadScene();
 				spingame.start();
 				gameNo = 2;
+				break;
+			case 2 :		
+				jumpgame.loadScene();
+				jumpgame.start();
+				gameNo = 3;
 				break;
 		}
 	}
