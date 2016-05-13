@@ -180,9 +180,8 @@ public class GMCanvas extends GameCanvas  implements Runnable, CommandListener  
 			
 			if(gameNo != 5){
 				g.setColor(0);
-				g.drawString("Score: "+Integer.toString(score), 0, 0, 0);
-				g.drawString(Integer.toString(delay), getWidth()/2, 0, Graphics.TOP|Graphics.HCENTER);
-				g.drawString(Integer.toString(lives), getWidth()-1, 0, Graphics.TOP|Graphics.RIGHT);
+				g.drawString("SCORE: "+Integer.toString(score), 0, 0, 0);
+				g.drawString("LIVES: "+Integer.toString(lives), getWidth()-1, 0, Graphics.TOP|Graphics.RIGHT);
 			}
 			
 			if(!gmover){
