@@ -15,6 +15,7 @@ public class GMCanvas extends GameCanvas  implements Runnable, CommandListener  
     private Thread thread;
 	private Graphics g;	
 	final Command exit = new Command("Exit", Command.EXIT, 1);
+	final Command newgame = new Command("New Game", Command.SCREEN, 1);
 		
 	grabGame grabgame;
 	pickGame pickgame;
@@ -31,6 +32,11 @@ public class GMCanvas extends GameCanvas  implements Runnable, CommandListener  
 	int tx = getWidth()-10;
 	int width = 10;
 	int height = getHeight();
+	private int score;
+	private int countup;
+	private int lives = 4;
+	private boolean gmover;
+	private boolean newgm;
 	
 	
 	public GMCanvas(GMMidlet host) {		
@@ -55,6 +61,7 @@ public class GMCanvas extends GameCanvas  implements Runnable, CommandListener  
 		grabgame.start();
 		
 		addCommand(exit);
+		addCommand(newgame);
 		setCommandListener(this);
 		
 		g = getGraphics();
@@ -112,7 +119,11 @@ public class GMCanvas extends GameCanvas  implements Runnable, CommandListener  
 					break;
 				case 4 :
 					
-					if(tx == 0 && width == getWidth()){						
+					if(tx == 0 && width == getWidth()){
+						if(gmover)
+							gameNo = 5;
+						else if(newgm)
+							gameNo = 3;
 						nextGame();
 					}
 					
@@ -130,6 +141,9 @@ public class GMCanvas extends GameCanvas  implements Runnable, CommandListener  
 						case 3 :
 							jumpgame.lm.paint(g, 0, 0);	
 							break;
+						case 5 :
+							gameover();
+							break;							
 					}
 					
 					for(int i = tx; i < width; i += 10){
@@ -140,8 +154,7 @@ public class GMCanvas extends GameCanvas  implements Runnable, CommandListener  
 					if (tx > 0) {
 						tx -= 10;
 						width += 10;
-					}
-					else{
+					} else {
 						width -= 10;
 					}
 					
@@ -152,10 +165,37 @@ public class GMCanvas extends GameCanvas  implements Runnable, CommandListener  
 					if(tx == 0 && width == 0){
 						tx = getWidth()-10;			
 						width = 10;
-						if(gameNo == 3) delay = 20;
+						if(gameNo == 3) delay = jumpgame.delay;
+						if(newgm) {
+							score = 0;
+							newgm = false;
+						}
 						gameNo2 = gameNo;
-					}					
+					}
 					break;
+				case 5 :
+					gameover();
+					break;
+			}
+			
+			if(gameNo != 5){
+				g.setColor(0);
+				g.drawString("Score: "+Integer.toString(score), 0, 0, 0);
+				g.drawString(Integer.toString(delay), getWidth()/2, 0, Graphics.TOP|Graphics.HCENTER);
+				g.drawString(Integer.toString(lives), getWidth()-1, 0, Graphics.TOP|Graphics.RIGHT);
+			}
+			
+			if(!gmover){
+				countup++;
+				if(countup>190){
+					if (gameNo != 3)
+						lost();
+					else {
+						won();
+						delay = 10;
+					}
+					countup = 0;
+				}
 			}
 			
 			flushGraphics(0, 0, getWidth(), getHeight());
@@ -164,7 +204,8 @@ public class GMCanvas extends GameCanvas  implements Runnable, CommandListener  
 				Thread.sleep(delay);
 			} catch (InterruptedException ex) {
 				ex.printStackTrace();
-			}		
+			}	
+			
 		}
 	}
 	
@@ -194,8 +235,44 @@ public class GMCanvas extends GameCanvas  implements Runnable, CommandListener  
 		}
 	}
 	
+	public void won() {
+		score++;
+		countup = 0;
+		gameNo2 = 4;
+	}
+	
+	public void lost() {
+		if(lives == 0){
+			gmover = true;
+		}
+		else{
+			lives--;
+		}
+		gameNo2 = 4;
+		countup = 0;
+	}
+	
+	private void gameover() {
+		g.setColor(0xFFFFFF);
+		g.fillRect(0, 0, getWidth(), getHeight());
+		
+		g.setColor(0);
+		g.drawString("Game Over", getWidth()/2, getHeight()/2-30, Graphics.BASELINE|Graphics.HCENTER);
+		g.drawString("Score: "+Integer.toString(score), getWidth()/2, getHeight()/2+10, Graphics.BASELINE|Graphics.HCENTER);
+	}	
+	
 	public void commandAction(Command command, Displayable displayable) {
-		if(command == exit){
+		if(command == newgame){
+			gmover = false;
+			newgm = true;
+			lives = 4;
+			gameNo2 = 4;
+			grabgame.init();
+			pickgame.init();
+			spingame.init();
+			jumpgame.init();
+		}
+		else if(command == exit){
 			myHost.exit();
 		}
 	}

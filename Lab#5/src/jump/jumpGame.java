@@ -20,6 +20,7 @@ public class jumpGame {
 	
 	int jumpseq[] = {0, -8, -5, -2, 0, 3, 6, 6};
 	int jumpindex;
+	public int delay = 27;
 	
 	GMCanvas host;
 	public boolean ready;
@@ -33,10 +34,16 @@ public class jumpGame {
 		leftmanS = gamedesign.getLeftmanSprite();
 		rightmanS = gamedesign.getRightmanSprite();
 		jumpmanS = gamedesign.getJumpmanSprite();
-		
+				
+		init();
+	}
+	
+	public final void init(){
+		delay = 27;
 	}
 	
 	public void loadScene(){
+		if(delay > 15) delay -= 2;
 		lineS.setFrame(0);
 		leftmanS.setFrame(0);
 		rightmanS.setFrame(0);
@@ -63,7 +70,8 @@ public class jumpGame {
 		else {
 			if(lineS.getFrame() > 16){
 				host.gameNo2 = 4;
-				ready = false;			
+				host.lost();
+				ready = false;
 				jumpmanS.setFrame(3);
 				host.delay = 10;
 				host.buttonhit = false;

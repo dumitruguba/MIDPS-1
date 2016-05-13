@@ -11,10 +11,8 @@ public class spinGame {
 	int yCenter;
 	int angle;
 	int arc;
-	int delay;
-	int speed = 2;
+	int speed;
 	int[][] arrow;
-	boolean interrupted;
 	private boolean movearrow;
 	private int sceneNo;
 	private final GMCanvas host;
@@ -26,10 +24,16 @@ public class spinGame {
 		yCenter = w / 2;
 		arrow = new int[3][2];
 		host  = myHost;
+				
+		init();
+	}
+	
+	public final void init(){
+		sceneNo = 0;
+		speed = 2;
 	}
 	
 	public void LoadScene() {
-		interrupted = false;
 		movearrow = false;
 		arrow[0][0] = xCenter + 51;
 		arrow[0][1] = yCenter;
@@ -38,7 +42,6 @@ public class spinGame {
 		arrow[2][0] = xCenter + 59;
 		arrow[2][1] = yCenter + 4;
 		angle = -175;
-		delay = 10;
 		if(speed < 12) speed += 2;
 		
 		switch (sceneNo) {
@@ -106,7 +109,10 @@ public class spinGame {
 				ready = false;		
 				host.buttonhit = false;
 				movearrow = false;
-				host.gameNo2 = 4;
+				if ((angle + arc) < arc+1 && (angle + arc) > 0) {
+					host.won();
+				}
+				else host.lost();
 			}
 		}
 	}

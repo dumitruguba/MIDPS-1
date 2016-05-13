@@ -55,16 +55,21 @@ public class pickGame {
 		transitionS = gamedesign.getBkgBT();
 		transitionS.setVisible(true);
 		
-		speed = 1;
-		distance[0] = speed;
-		distance[1] = 0;
 		movingup = false;
 		lcol = false;
 		rcol = false;
 		mcol = false;
-		layerupdated = false;
+		layerupdated = false;	
 		
+		init();
 	}
+	
+	public final void init(){
+		sceneNo = 0;
+		speed = 1;
+		distance[0] = speed;
+		distance[1] = 0;
+	}	
 	
 	public void pickGameRun(){
 		moveHand();
@@ -106,8 +111,15 @@ public class pickGame {
 			if(refer[1]<150){
 				ready = false;		
 				host.buttonhit = false;
-				distance[1] = 0;
-				host.gameNo2 = 4;
+				distance[1] = 0;					
+				if(lcol || rcol || mcol || refer[0]<84 || refer[0]>141){
+					
+					host.lost();
+				}
+				else if(sceneNo == 3 && refer[0]>97){						
+					host.lost();
+				}
+				else host.won();
 			}
 		}
 	}

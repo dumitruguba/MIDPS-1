@@ -20,10 +20,9 @@ public class grabGame {
 	private boolean grabed;
 	private boolean ready;
 	private boolean glide;
-	private int[] delta;
+	private final int[] delta;
 	int wait;
-	int delay = 10;
-	private int speed = 1;
+	private int speed;
 	private int sceneNo;
 	private final GMCanvas host;
 	public boolean started;
@@ -33,17 +32,24 @@ public class grabGame {
 		lm = new LayerManager();
 		r  = new Random();
 		
-		host = myHost;
-		
 		delta = new int[2];
-		delta[0] = 0;
-		delta[1] = speed;		
 		
+		host = myHost;
+				
 		hand1S  = gd.getHand1_sprite();
 		hand1hS = gd.getHand1h_sprite();
 		hand2S  = gd.getHand2_sprite();
 		hand2hS = gd.getHand2h_sprite();
 		bar		= gd.getBar1_sprite();
+		
+		init();
+	}
+	
+	public final void init(){
+		sceneNo = 0;
+		speed = 2;
+		delta[0] = 0;
+		delta[1] = speed;
 	}
 	
 	public void grabGameRun(){
@@ -62,12 +68,12 @@ public class grabGame {
 			if(bar.getY() > 320){		
 				host.buttonhit = false;
 				started = false;
-				host.gameNo2 = 4;
+				host.lost();
 			}
 			else if(grabed && delta[1]==0){		
 				host.buttonhit = false;
 				started = false;
-				host.gameNo2 = 4;
+				host.won();
 			}
 		}
 		else{		
@@ -101,6 +107,7 @@ public class grabGame {
 				default:
 					break;
 			}
+			
 			bar.setVisible(true);
 			ready = false;
 			glide = false;
@@ -109,6 +116,7 @@ public class grabGame {
 			delta[0] = 0;
 			delta[1] = speed;
 			wait = 20 + r.nextInt(60);
+			
 		} catch (IOException ex) {
 			ex.printStackTrace();
 		}
