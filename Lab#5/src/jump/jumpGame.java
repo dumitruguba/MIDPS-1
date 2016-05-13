@@ -62,7 +62,7 @@ public class jumpGame {
 		}
 		else {
 			if(lineS.getFrame() > 16){
-				host.nextGame();
+				host.gameNo2 = 4;
 				ready = false;			
 				jumpmanS.setFrame(3);
 				host.delay = 10;

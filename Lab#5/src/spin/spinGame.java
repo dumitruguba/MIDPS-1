@@ -106,7 +106,7 @@ public class spinGame {
 				ready = false;		
 				host.buttonhit = false;
 				movearrow = false;
-				host.nextGame();
+				host.gameNo2 = 4;
 			}
 		}
 	}

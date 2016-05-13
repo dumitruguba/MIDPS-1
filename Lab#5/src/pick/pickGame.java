@@ -16,8 +16,8 @@ public class pickGame {
 	Sprite middleSprite;
 	Sprite leftnoseSprite;
 	Sprite midnoseSprite;
-	Sprite rightnoseSprite;	
-	TiledLayer transitionS;	
+	Sprite rightnoseSprite;
+	public TiledLayer transitionS;
 		
 	int[] distance = {1, 0};
 	int[] refer;
@@ -107,7 +107,7 @@ public class pickGame {
 				ready = false;		
 				host.buttonhit = false;
 				distance[1] = 0;
-				host.nextGame();
+				host.gameNo2 = 4;
 			}
 		}
 	}

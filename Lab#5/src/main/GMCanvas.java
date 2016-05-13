@@ -22,10 +22,16 @@ public class GMCanvas extends GameCanvas  implements Runnable, CommandListener  
 	jumpGame jumpgame;
 		
 	int gameNo;
+	public int gameNo2;
 	public int delay = 10;
 	public boolean buttonhit;
 	private boolean buttonreleased;
     private boolean interrupted;
+	
+	int tx = getWidth()-10;
+	int width = 10;
+	int height = getHeight();
+	
 	
 	public GMCanvas(GMMidlet host) {		
 		super(true);
@@ -70,7 +76,7 @@ public class GMCanvas extends GameCanvas  implements Runnable, CommandListener  
 			else if (!((keyState & FIRE_PRESSED) != 0) && !buttonreleased){
 				buttonreleased = true;
 			}
-			switch(gameNo){
+			switch(gameNo2){
 				default :
 				case 0 :
 					grabgame.grabGameRun();						
@@ -104,6 +110,52 @@ public class GMCanvas extends GameCanvas  implements Runnable, CommandListener  
 					}
 					jumpgame.jumpGameRun();
 					break;
+				case 4 :
+					
+					if(tx == 0 && width == getWidth()){						
+						nextGame();
+					}
+					
+					switch(gameNo){
+						default :
+						case 0 :
+							grabgame.lm.paint(g, 0, 0);	
+							break;
+						case 1 :
+							pickgame.lm.paint(g, 0, 0);	
+							break;
+						case 2 :		
+							spingame.paint(g);
+							break;
+						case 3 :
+							jumpgame.lm.paint(g, 0, 0);	
+							break;
+					}
+					
+					for(int i = tx; i < width; i += 10){
+						pickgame.transitionS.setPosition(i, 0);
+						pickgame.transitionS.paint(g);
+					}
+					
+					if (tx > 0) {
+						tx -= 10;
+						width += 10;
+					}
+					else{
+						width -= 10;
+					}
+					
+					if (buttonhit){
+						buttonhit = false;
+					}
+					
+					if(tx == 0 && width == 0){
+						tx = getWidth()-10;			
+						width = 10;
+						if(gameNo == 3) delay = 20;
+						gameNo2 = gameNo;
+					}					
+					break;
 			}
 			
 			flushGraphics(0, 0, getWidth(), getHeight());
@@ -117,14 +169,10 @@ public class GMCanvas extends GameCanvas  implements Runnable, CommandListener  
 	}
 	
 	public void nextGame(){		
-		switch(gameNo){			
+		switch(gameNo){
 			default:
 			case 3 :
-				try {
-					grabgame.loadgrabScene();
-				} catch (IOException ex) {
-					ex.printStackTrace();
-				}
+				grabgame.loadgrabScene();
 				grabgame.start();
 				gameNo = 0;
 				break;

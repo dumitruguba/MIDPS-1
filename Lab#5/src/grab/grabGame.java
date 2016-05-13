@@ -62,12 +62,12 @@ public class grabGame {
 			if(bar.getY() > 320){		
 				host.buttonhit = false;
 				started = false;
-				host.nextGame();
+				host.gameNo2 = 4;
 			}
 			else if(grabed && delta[1]==0){		
 				host.buttonhit = false;
 				started = false;
-				host.nextGame();
+				host.gameNo2 = 4;
 			}
 		}
 		else{		
@@ -79,36 +79,39 @@ public class grabGame {
 		}
 	}
 	
-	public void loadgrabScene() throws IOException{
-		
-		if(speed < 6) speed+=2;
-		
-		gd.updateLayerManagerForGrabScene(lm);
-		switch (sceneNo) {
-			case 0:
-			case 3:
-				sceneNo = 1;
-				bar = gd.getBar1_sprite();				
-				break;
-			case 1:
-				sceneNo = 2;
-				bar = gd.getBar2_sprite();
-				break;
-			case 2:
-				sceneNo = 3;
-				bar = gd.getBar3_sprite();
-				break;
-			default:
-				break;
+	public void loadgrabScene(){		
+		try {
+			if(speed < 6) speed+=2;
+			
+			gd.updateLayerManagerForGrabScene(lm);
+			switch (sceneNo) {
+				case 0:
+				case 3:
+					sceneNo = 1;
+					bar = gd.getBar1_sprite();
+					break;
+				case 1:
+					sceneNo = 2;
+					bar = gd.getBar2_sprite();
+					break;
+				case 2:
+					sceneNo = 3;
+					bar = gd.getBar3_sprite();
+					break;
+				default:
+					break;
+			}
+			bar.setVisible(true);
+			ready = false;
+			glide = false;
+			grabed = false;
+			
+			delta[0] = 0;
+			delta[1] = speed;
+			wait = 20 + r.nextInt(60);
+		} catch (IOException ex) {
+			ex.printStackTrace();
 		}
-		bar.setVisible(true);
-		ready = false;
-		glide = false;
-		grabed = false;
-
-		delta[0] = 0;
-		delta[1] = speed;
-		wait = 20 + r.nextInt(60);
 	}
 	
 	public void buttonhit (){
