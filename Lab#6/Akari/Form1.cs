@@ -22,6 +22,15 @@ namespace Akari
           public Form1()
           {
                InitializeComponent();
+               button1.BackColor = Color.LightGray;
+               button2.BackColor = Color.LightGray;
+               button3.BackColor = Color.LightGray;
           }
+
+          private void Form1_Load(object sender, EventArgs e)
+          {
+              GetPuzzleCount();
+          }
+
      }
 }
