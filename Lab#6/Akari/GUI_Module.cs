@@ -120,6 +120,7 @@ namespace Akari
                      btnStage[i, j] = new MyButton(i,j);
                      btnStage[i, j].Size = new Size(30, 30);
                      label.Controls.Add(btnStage[i, j]);
+                     btnStage[i, j].Click += new EventHandler(btnGame_Click);
                      digit = Convert.ToInt32(puzzle_matrix[i, j].ToString().Substring(0, 1));
                      if (puzzle_matrix[i, j] >= 0 && puzzle_matrix[i, j] <= 49)
                      {
@@ -145,6 +146,55 @@ namespace Akari
                  }
              }
              stage_panel.Show();
+         }
+
+         private void btnGame_Click(object sender, EventArgs e)
+         {
+             MyButton button = (MyButton)sender;
+             ClickOnButton(button._i, button._j);
+             HasWon();
+             
+         }
+
+         private void UpdateButton(int k, int p)
+         {
+             if (puzzle_matrix[k, p] / 10 == 6)
+             {
+                 if (puzzle_matrix[k, p] % 10 == 0)
+                 {
+                     btnStage[k, p].BackColor = Color.Orange;
+                     btnStage[k, p].FlatAppearance.MouseOverBackColor = Color.Orange;
+                     btnStage[k, p].FlatAppearance.MouseDownBackColor = Color.Orange;
+                 }
+                 else
+                 {
+                     btnStage[k, p].BackColor = Color.Red;
+                     btnStage[k, p].FlatAppearance.MouseOverBackColor = Color.Red;
+                     btnStage[k, p].FlatAppearance.MouseDownBackColor = Color.Red;
+                 }
+             }
+
+             if (puzzle_matrix[k, p] > 70 && puzzle_matrix[k, p] <= 79)
+             {
+                 btnStage[k, p].BackColor = Color.Khaki;
+                 btnStage[k, p].FlatAppearance.MouseOverBackColor = Color.Khaki;
+                 btnStage[k, p].FlatAppearance.MouseDownBackColor = Color.Khaki;
+             }
+
+             else if (puzzle_matrix[k, p] >= 0 && puzzle_matrix[k, p] <= 49)
+             {
+                 if (puzzle_matrix[k, p] / 10 == puzzle_matrix[k, p] % 10)
+                     btnStage[k, p].ForeColor = Color.Orange;
+                 else
+                     btnStage[k, p].ForeColor = Color.White;
+             }
+
+             else if (puzzle_matrix[k, p] == 70)
+             {
+                 btnStage[k, p].BackColor = Color.Black;
+                 btnStage[k, p].FlatAppearance.MouseOverBackColor = Color.Black;
+                 btnStage[k, p].FlatAppearance.MouseDownBackColor = Color.Black;
+             }
          }
      }
 }
