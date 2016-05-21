@@ -359,5 +359,43 @@ namespace Akari
                     }
                }
           }
+          
+          private bool HasWon()
+          {
+               for (int i = 0; i < puzzle_rows; i++)
+               {
+                    for (int j = 0; j < puzzle_columns; j++)
+                    {
+                         if (puzzle_matrix[i, j] < 50 && puzzle_matrix[i, j] / 10 != puzzle_matrix[i, j] % 10)
+                              return false;
+                         else if (puzzle_matrix[i, j] == 70)
+                              return false;
+                         else if (puzzle_matrix[i, j] / 10 == 6 && puzzle_matrix[i, j] % 10 != 0)
+                              return false;
+                    }
+               }
+
+               return true;
+          }
+
+          private void ResetPuzzle()
+          {
+               for (int i = 0; i < puzzle_rows; i++)
+               {
+                    for (int j = 0; j < puzzle_columns; j++)
+                    {
+                         if (puzzle_matrix[i, j] / 10 == 6)
+                         {
+                              puzzle_matrix[i, j] = 70;
+                         }
+                         else
+                         {
+                              puzzle_matrix[i, j] = (puzzle_matrix[i, j] / 10) * 10;
+                         }
+
+                         UpdateButton(i, j);
+                    }
+               }
+          }
      }
 }

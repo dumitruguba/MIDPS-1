@@ -20,8 +20,8 @@ namespace Akari
             _j = j;
 
             this.BackColor = Color.Black;
-            this.Font = new Font("Tahoma", 10f);
-            this.Font = new Font(this.Font, FontStyle.Bold);
+            this.Font = new Font("Tahoma", 10f, FontStyle.Bold);
+			this.ForeColor = Color.DarkRed;
             this.FlatStyle = FlatStyle.Flat;
             this.FlatAppearance.MouseOverBackColor = Color.Black;
             this.FlatAppearance.MouseDownBackColor = Color.Black;
@@ -121,6 +121,7 @@ namespace Akari
                      btnStage[i, j].Size = new Size(30, 30);
                      label.Controls.Add(btnStage[i, j]);
                      btnStage[i, j].Click += new EventHandler(btnGame_Click);
+					 btnStage[i, j].MouseUp += new MouseEventHandler(btnGame_RightClick);
                      digit = Convert.ToInt32(puzzle_matrix[i, j].ToString().Substring(0, 1));
                      if (puzzle_matrix[i, j] >= 0 && puzzle_matrix[i, j] <= 49)
                      {
@@ -152,14 +153,31 @@ namespace Akari
          {
              MyButton button = (MyButton)sender;
              ClickOnButton(button._i, button._j);
-             HasWon();
              
          }
+		 
+		 private void btnGame_RightClick(object sender, MouseEventArgs e)
+		 {
+		    MyButton button = (MyButton)sender;
+		    if (e.Button == MouseButtons.Right && puzzle_matrix[button._i, button._j] / 10 == 7)
+		    {
+			 	 if (button.Text == "")
+				 {
+                     button.Text = "●";//·■•●▪
+				 }
+                 else if (button.Text == "●") //·■•●▪
+				 {
+					  button.Text = "";
+				 }
+		    }
+		 }
 
          private void UpdateButton(int k, int p)
          {
              if (puzzle_matrix[k, p] / 10 == 6)
              {
+				 btnStage[k, p].Text = "";
+				 
                  if (puzzle_matrix[k, p] % 10 == 0)
                  {
                      btnStage[k, p].BackColor = Color.Orange;
