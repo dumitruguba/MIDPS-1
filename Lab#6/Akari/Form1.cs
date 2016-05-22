@@ -22,6 +22,35 @@ namespace Akari
           int easy_count;
           int normal_count;
 
+          class GameMove
+          {
+               int _i, _j, _type;
+
+               public int I
+               {
+                    get { return _i; }
+               }
+
+               public int J
+               {
+                    get { return _j; }
+               }
+
+               public int Type
+               {
+                    get { return _type; }
+               }
+
+               public GameMove(int i, int j, int type)
+               {
+                    _i = i;
+                    _j = j;
+                    _type = type;
+               }
+          }
+
+          Stack<GameMove> moves = new Stack<GameMove>(200);
+
           public Form1()
           {
                InitializeComponent();

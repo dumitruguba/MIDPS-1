@@ -396,6 +396,33 @@ namespace Akari
                xmlNode.Attributes["time"].Value = time.ToString();
 
                doc.Save("puzzles.xml");
-          }              
+          }
+
+          private void SetMove(int i, int j, int type)
+          {
+               GameMove move = new GameMove(i, j, type);
+               moves.Push(move);
+          }
+
+          private void UndoMove()
+          {
+               if (moves.Count != 0)
+               {
+                    GameMove move = moves.Pop();
+                    if (move.Type == 0)
+                    {
+                         ClickOnButton(move.I, move.J);
+                    }
+                    else if (move.Type == 1)
+                    {
+                         SetPoint(btnStage[move.I, move.J]);
+                    }
+                    else if (move.Type == 2)
+                    {
+                         ClickOnButton(move.I, move.J);
+                         SetPoint(btnStage[move.I, move.J]);
+                    }
+               }
+          }
      }
 }
