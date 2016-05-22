@@ -99,7 +99,9 @@ namespace Akari
              LoadPuzzle(difficulty, problem_index);
              LoadStage();
              back_to_problems.Show();
+             reset_button.Show();
              timer1.Start();
+             time_label.Show();
          }
 
          MyButton[,] btnStage;
@@ -110,7 +112,7 @@ namespace Akari
              stage_panel.Hide();
 
              btnStage = new MyButton[puzzle_rows, puzzle_columns];
-             int digit, x = 0, y = 0;
+             int x = 0, y = 0;
 
              if (difficulty == "Practice") { 
                  x = 117; 
@@ -168,7 +170,22 @@ namespace Akari
          {
              MyButton button = (MyButton)sender;
              ClickOnButton(button._i, button._j);
-             
+             if (HasWon())
+             {
+                 if (time_contor < GetTime(difficulty, problem_index))
+                     SetTime(difficulty, problem_index, time_contor);
+
+                 timer1.Stop();
+                 
+                 for (int i = 0; i < puzzle_rows; i++)
+                 {
+                     for (int j = 0; j < puzzle_columns; j++)
+                     {
+                         if (!(puzzle_matrix[i, j] >= 0 && puzzle_matrix[i, j] <= 49))
+                             btnStage[i, j].Enabled = false;
+                     }
+                 }
+             }
          }
 		 
 		 private void btnGame_RightClick(object sender, MouseEventArgs e)
@@ -248,18 +265,38 @@ namespace Akari
              label.Hide();
              problems_panel.Show();
              back_to_problems.Hide();
-             time_label.Text = "";
+             reset_button.Hide();
+             time_label.Hide();
+             time_label.Text = "00:00:00";
              time_contor = 0;
 
              if (!HasWon())
              {
                  timer1.Stop();
              }
+             for (int i = 0; i < 4; i++)
+             {
+                 for (int j = 0; j < 5; j++)
+                 {
+                     if (GetTime(difficulty, btnArray[i, j].Text) != 99999)
+                     {
+                         TimeSpan score_time = TimeSpan.FromSeconds(GetTime(difficulty, btnArray[i, j].Text));
+                         new ToolTip().SetToolTip(btnArray[i, j], score_time.ToString(@"hh\:mm\:ss"));
+                         btnArray[i, j].BackColor = Color.Orange;
+                         btnArray[i, j].FlatAppearance.MouseOverBackColor = Color.Orange;
+                         btnArray[i, j].FlatAppearance.MouseDownBackColor = Color.Orange;
+                     }
+                 }
+             }
+
+         }
+
+         private void reset_btn_Click(object sender, EventArgs e)
+         {
+             ResetPuzzle();
          }
 
          int time_contor = 0;
-
-         DateTime time1;
 
          private void timer1_Tick(object sender, EventArgs e)
          {
@@ -267,32 +304,6 @@ namespace Akari
 
              TimeSpan time = TimeSpan.FromSeconds(time_contor);
              time_label.Text = time.ToString(@"hh\:mm\:ss");
-
-             if (HasWon())
-             {
-                 if (time_contor < GetTime(difficulty, problem_index))
-                     SetTime(difficulty, problem_index, time_contor);
-                 timer1.Stop();
-             }
          }
-
-         private void DisplayScore()
-         {
-             ToolTip ttip = new ToolTip();
-             /*for (int i = 0; i < 4; i++)
-             {
-                 for (int j = 0; j < 5; j++)
-                 {
-                     new ToolTip().SetToolTip(btnArray[i, j], "Buton: " + i.ToString() + " " + j.ToString());
-                 }
-             }*/
-             //score_label = new Label();
-             ttip.SetToolTip(btnArray[0, 0], "Buton: ");
-
-             TimeSpan score_time = TimeSpan.FromSeconds(GetTime(difficulty, problem_index));
-             //score_label.Text = score_time.ToString(@"hh\:mm\:ss");
-
-         }
-
      }
 }
