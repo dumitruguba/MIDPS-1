@@ -32,6 +32,9 @@ namespace Akari
                back_to_menu.Hide();
                back_to_problems.BackColor = Color.LightGray;
                back_to_problems.Hide();
+               time_label.Hide();
+               reset_button.BackColor = Color.LightGray;
+               reset_button.Hide();
 
                try
                {

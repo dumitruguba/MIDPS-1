@@ -36,9 +36,10 @@
             this.problems_panel = new System.Windows.Forms.Panel();
             this.back_to_menu = new System.Windows.Forms.Button();
             this.stage_panel = new System.Windows.Forms.Panel();
+            this.reset_button = new System.Windows.Forms.Button();
+            this.time_label = new System.Windows.Forms.Label();
             this.back_to_problems = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.time_label = new System.Windows.Forms.Label();
             this.menu_panel.SuspendLayout();
             this.problems_panel.SuspendLayout();
             this.stage_panel.SuspendLayout();
@@ -121,6 +122,7 @@
             // 
             // stage_panel
             // 
+            this.stage_panel.Controls.Add(this.reset_button);
             this.stage_panel.Controls.Add(this.time_label);
             this.stage_panel.Controls.Add(this.back_to_problems);
             this.stage_panel.Controls.Add(this.problems_panel);
@@ -128,6 +130,31 @@
             this.stage_panel.Name = "stage_panel";
             this.stage_panel.Size = new System.Drawing.Size(424, 395);
             this.stage_panel.TabIndex = 2;
+            // 
+            // reset_button
+            // 
+            this.reset_button.FlatAppearance.BorderSize = 0;
+            this.reset_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.reset_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reset_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.reset_button.Location = new System.Drawing.Point(337, 353);
+            this.reset_button.Name = "reset_button";
+            this.reset_button.Size = new System.Drawing.Size(75, 30);
+            this.reset_button.TabIndex = 6;
+            this.reset_button.Text = "Reset";
+            this.reset_button.UseVisualStyleBackColor = true;
+            this.reset_button.Click += new System.EventHandler(this.reset_btn_Click);
+            // 
+            // time_label
+            // 
+            this.time_label.AutoSize = true;
+            this.time_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.time_label.ForeColor = System.Drawing.Color.SteelBlue;
+            this.time_label.Location = new System.Drawing.Point(167, 8);
+            this.time_label.Name = "time_label";
+            this.time_label.Size = new System.Drawing.Size(79, 20);
+            this.time_label.TabIndex = 5;
+            this.time_label.Text = "00:00:00";
             // 
             // back_to_problems
             // 
@@ -147,16 +174,6 @@
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // time_label
-            // 
-            this.time_label.AutoSize = true;
-            this.time_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.time_label.ForeColor = System.Drawing.Color.SteelBlue;
-            this.time_label.Location = new System.Drawing.Point(184, 8);
-            this.time_label.Name = "time_label";
-            this.time_label.Size = new System.Drawing.Size(0, 15);
-            this.time_label.TabIndex = 5;
             // 
             // Form1
             // 
@@ -187,6 +204,7 @@
           private System.Windows.Forms.Button back_to_problems;
           private System.Windows.Forms.Timer timer1;
           private System.Windows.Forms.Label time_label;
+          private System.Windows.Forms.Button reset_button;
 
 
      }
