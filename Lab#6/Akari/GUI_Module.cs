@@ -76,6 +76,16 @@ namespace Akari
                      btnArray[i, j].FlatAppearance.MouseDownBackColor = Color.SteelBlue;
                      btnArray[i, j].Text = ((j+1) +(i*5)).ToString();
                      btnArray[i, j].Location = new Point(62 + j * 60, 80 + i * 60);
+
+                     if (GetTime(difficulty, btnArray[i, j].Text) != 99999)
+                     {
+                         TimeSpan score_time = TimeSpan.FromSeconds(GetTime(difficulty, btnArray[i, j].Text));
+                         new ToolTip().SetToolTip(btnArray[i, j], score_time.ToString(@"hh\:mm\:ss"));
+                         btnArray[i, j].BackColor = Color.Orange;
+                         btnArray[i, j].FlatAppearance.MouseOverBackColor = Color.Orange;
+                         btnArray[i, j].FlatAppearance.MouseDownBackColor = Color.Orange;
+                     }
+
                      if (--contor == 0) return;
                  }
              }
@@ -128,7 +138,6 @@ namespace Akari
                      label.Controls.Add(btnStage[i, j]);
                      btnStage[i, j].Click += new EventHandler(btnGame_Click);
 					 btnStage[i, j].MouseUp += new MouseEventHandler(btnGame_RightClick);
-                     digit = Convert.ToInt32(puzzle_matrix[i, j].ToString().Substring(0, 1));
                      if (puzzle_matrix[i, j] >= 0 && puzzle_matrix[i, j] <= 49)
                      {
                          if (puzzle_matrix[i, j] / 10 == puzzle_matrix[i, j] % 10)
@@ -136,7 +145,7 @@ namespace Akari
                          else
                              btnStage[i, j].ForeColor = Color.White;
 
-                         btnStage[i, j].Text = digit.ToString();
+                         btnStage[i, j].Text = (puzzle_matrix[i, j] / 10).ToString();
                          btnStage[i, j].BackColor = Color.SteelBlue;
                          btnStage[i, j].FlatAppearance.MouseOverBackColor = Color.SteelBlue;
                          btnStage[i, j].FlatAppearance.MouseDownBackColor = Color.SteelBlue;
@@ -240,6 +249,12 @@ namespace Akari
              problems_panel.Show();
              back_to_problems.Hide();
              time_label.Text = "";
+             time_contor = 0;
+
+             if (!HasWon())
+             {
+                 timer1.Stop();
+             }
          }
 
          int time_contor = 0;
@@ -250,18 +265,33 @@ namespace Akari
          {
              time_contor++;
 
-             if (time_contor == 1)
-                 time1 = DateTime.Now;
+             TimeSpan time = TimeSpan.FromSeconds(time_contor);
+             time_label.Text = time.ToString(@"hh\:mm\:ss");
 
              if (HasWon())
              {
-                 var time2 = DateTime.Now;
-                 var time3 = time2 - time1;
-
-                 time_label.Text = time3.ToString(@"hh\:mm\:ss");
-
+                 if (time_contor < GetTime(difficulty, problem_index))
+                     SetTime(difficulty, problem_index, time_contor);
                  timer1.Stop();
              }
+         }
+
+         private void DisplayScore()
+         {
+             ToolTip ttip = new ToolTip();
+             /*for (int i = 0; i < 4; i++)
+             {
+                 for (int j = 0; j < 5; j++)
+                 {
+                     new ToolTip().SetToolTip(btnArray[i, j], "Buton: " + i.ToString() + " " + j.ToString());
+                 }
+             }*/
+             //score_label = new Label();
+             ttip.SetToolTip(btnArray[0, 0], "Buton: ");
+
+             TimeSpan score_time = TimeSpan.FromSeconds(GetTime(difficulty, problem_index));
+             //score_label.Text = score_time.ToString(@"hh\:mm\:ss");
+
          }
 
      }
