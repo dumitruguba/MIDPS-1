@@ -36,6 +36,7 @@
             this.problems_panel = new System.Windows.Forms.Panel();
             this.back_to_menu = new System.Windows.Forms.Button();
             this.stage_panel = new System.Windows.Forms.Panel();
+            this.undo_button = new System.Windows.Forms.Button();
             this.reset_button = new System.Windows.Forms.Button();
             this.time_label = new System.Windows.Forms.Label();
             this.back_to_problems = new System.Windows.Forms.Button();
@@ -122,6 +123,7 @@
             // 
             // stage_panel
             // 
+            this.stage_panel.Controls.Add(this.undo_button);
             this.stage_panel.Controls.Add(this.reset_button);
             this.stage_panel.Controls.Add(this.time_label);
             this.stage_panel.Controls.Add(this.back_to_problems);
@@ -130,6 +132,20 @@
             this.stage_panel.Name = "stage_panel";
             this.stage_panel.Size = new System.Drawing.Size(424, 395);
             this.stage_panel.TabIndex = 2;
+            // 
+            // undo_button
+            // 
+            this.undo_button.FlatAppearance.BorderSize = 0;
+            this.undo_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.undo_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.undo_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.undo_button.Location = new System.Drawing.Point(171, 353);
+            this.undo_button.Name = "undo_button";
+            this.undo_button.Size = new System.Drawing.Size(75, 30);
+            this.undo_button.TabIndex = 7;
+            this.undo_button.Text = "Undo";
+            this.undo_button.UseVisualStyleBackColor = true;
+            this.undo_button.Click += new System.EventHandler(this.undo_btn_click);
             // 
             // reset_button
             // 
@@ -205,6 +221,7 @@
           private System.Windows.Forms.Timer timer1;
           private System.Windows.Forms.Label time_label;
           private System.Windows.Forms.Button reset_button;
+          private System.Windows.Forms.Button undo_button;
 
 
      }
