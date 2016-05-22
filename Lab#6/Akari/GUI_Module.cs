@@ -38,14 +38,17 @@ namespace Akari
              difficulty = button.Text;
              LoadProblems();
              problems_panel.Show();
+             back_to_menu.Show();
          }
 
          String difficulty;
          String problem_index;
-         
+
+         Button[,] btnArray;
+
          private void LoadProblems()
          {
-             var btnArray = new Button[4, 5];
+             btnArray = new Button[4, 5];
 
              int contor = 0;
 
@@ -85,9 +88,12 @@ namespace Akari
              problem_index = button.Text;
              LoadPuzzle(difficulty, problem_index);
              LoadStage();
+             back_to_problems.Show();
+             timer1.Start();
          }
 
          MyButton[,] btnStage;
+         Label label;
 
          private void LoadStage()
          {
@@ -97,15 +103,15 @@ namespace Akari
              int digit, x = 0, y = 0;
 
              if (difficulty == "Practice") { 
-                 x = 115; 
+                 x = 117; 
                  y = 75; 
              }
              else if (difficulty == "Easy" || difficulty == "Normal") { 
-                 x = 52; 
+                 x = 54; 
                  y = 32; 
              }
 
-             Label label = new Label();
+             label = new Label();
 
              label.BackColor = Color.DimGray;
              label.Location = new Point(x-4, y-4);
@@ -214,5 +220,49 @@ namespace Akari
                  btnStage[k, p].FlatAppearance.MouseDownBackColor = Color.Black;
              }
          }
+
+         private void back_to_menu_button_Click(object sender, EventArgs e)
+         {
+             for (int i = 0; i < 4; i++)
+             {
+                 for (int j = 0; j < 5; j++)
+                 {
+                     btnArray[i, j].Hide();
+                 }
+             }
+             menu_panel.Show();
+             back_to_menu.Hide();
+         }
+
+         private void back_to_problems_button_Click(object sender, EventArgs e)
+         {
+             label.Hide();
+             problems_panel.Show();
+             back_to_problems.Hide();
+             time_label.Text = "";
+         }
+
+         int time_contor = 0;
+
+         DateTime time1;
+
+         private void timer1_Tick(object sender, EventArgs e)
+         {
+             time_contor++;
+
+             if (time_contor == 1)
+                 time1 = DateTime.Now;
+
+             if (HasWon())
+             {
+                 var time2 = DateTime.Now;
+                 var time3 = time2 - time1;
+
+                 time_label.Text = time3.ToString(@"hh\:mm\:ss");
+
+                 timer1.Stop();
+             }
+         }
+
      }
 }
