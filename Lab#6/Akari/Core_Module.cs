@@ -14,21 +14,7 @@ namespace Akari
      {
           private void LoadPuzzle(string difficulty, string index)
           {
-               XmlNode xmlNode;
-               XmlDocument doc = new XmlDocument();
-
-               try
-               {
-                    doc.Load("puzzles.xml");
-               }
-               catch
-               {
-                    MessageBox.Show("Could not open input XML file.", "Error");
-                    Application.Exit();
-                    return;
-               }
-
-               xmlNode = doc.SelectSingleNode("/Puzzles/" + difficulty + "/Puzzle[@index='" + index + "']");
+               XmlNode xmlNode = doc.SelectSingleNode("/Puzzles/" + difficulty + "/Puzzle[@index='" + index + "']");
                if (xmlNode == null)
                {
                     MessageBox.Show("Puzzle \"" + difficulty + " - " + index + "\" not found.", "Error");
@@ -57,21 +43,7 @@ namespace Akari
 
           void GetPuzzleCount()
           {
-               XmlNode xmlNode;
-               XmlDocument doc = new XmlDocument();
-
-               try
-               {
-                    doc.Load("puzzles.xml");
-               }
-               catch
-               {
-                    MessageBox.Show("Could not open input XML file.", "Error");
-                    Application.Exit();
-                    return;
-               }
-
-               xmlNode = doc.SelectSingleNode("/Puzzles/Practice/Count");
+               XmlNode xmlNode = doc.SelectSingleNode("/Puzzles/Practice/Count");
                if (xmlNode == null)
                {
                     MessageBox.Show("Node \"/Puzzles/Practice/Count\" not found.", "Error");
@@ -397,5 +369,33 @@ namespace Akari
                     }
                }
           }
+          
+          private int GetTime(string difficulty, string index)
+          {
+               XmlNode xmlNode = doc.SelectSingleNode("/Puzzles/" + difficulty + "/Puzzle[@index='" + index + "']");
+               if (xmlNode == null)
+               {
+                    MessageBox.Show("Puzzle \"" + difficulty + " - " + index + "\" not found.", "Error");
+                    Application.Exit();
+                    return 0;
+               }
+
+               return Int32.Parse(xmlNode.Attributes["time"].Value);
+          }
+
+          private void SetTime(string difficulty, string index, int time)
+          {
+               XmlNode xmlNode = doc.SelectSingleNode("/Puzzles/" + difficulty + "/Puzzle[@index='" + index + "']");
+               if (xmlNode == null)
+               {
+                    MessageBox.Show("Puzzle \"" + difficulty + " - " + index + "\" not found.", "Error");
+                    Application.Exit();
+                    return;
+               }
+
+               xmlNode.Attributes["time"].Value = time.ToString();
+
+               doc.Save("puzzles.xml");
+          }              
      }
 }

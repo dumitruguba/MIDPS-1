@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Xml;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,6 +12,8 @@ namespace Akari
 {
      public partial class Form1 : Form
      {
+          XmlDocument doc = new XmlDocument();
+
           int[,] puzzle_matrix;
           int puzzle_columns;
           int puzzle_rows;
@@ -29,6 +32,17 @@ namespace Akari
                back_to_menu.Hide();
                back_to_problems.BackColor = Color.LightGray;
                back_to_problems.Hide();
+
+               try
+               {
+                    doc.Load("puzzles.xml");
+               }
+               catch
+               {
+                    MessageBox.Show("Could not open input XML file.", "Error");
+                    Application.Exit();
+                    return;
+               }
           }
 
           private void Form1_Load(object sender, EventArgs e)

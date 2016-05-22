@@ -2,7 +2,7 @@
 <Puzzles>
 	<Practice>
 		<Count value="20" />
-		<Puzzle index="1" rows="6" cols="6">
+		<Puzzle index="1" rows="6" cols="6" time="99999">
 			<Row>50 70 70 70 70 70</Row>
 			<Row>70 70 20 50 70 50</Row>
 			<Row>50 70 70 70 70 70</Row>
@@ -10,7 +10,7 @@
 			<Row>20 70 50 50 70 70</Row>
 			<Row>70 70 70 70 70 20</Row>
 		</Puzzle>
-		<Puzzle index="2" rows="6" cols="6">
+		<Puzzle index="2" rows="6" cols="6" time="99999">
 			<Row>70 70 70 70 70 50</Row>
 			<Row>70 40 70 70 70 70</Row>
 			<Row>70 70 70 50 70 70</Row>
@@ -18,7 +18,7 @@
 			<Row>70 70 70 70 20 70</Row>
 			<Row>50 70 70 70 70 70</Row>
 		</Puzzle>
-		<Puzzle index="3" rows="6" cols="6">
+		<Puzzle index="3" rows="6" cols="6" time="99999">
 			<Row>70 70 70 10 70 70</Row>
 			<Row>70 40 70 70 70 70</Row>
 			<Row>70 70 70 70 70 10</Row>
@@ -26,7 +26,7 @@
 			<Row>70 70 70 70 20 70</Row>
 			<Row>70 70 50 70 70 70</Row>
 		</Puzzle>
-		<Puzzle index="4" rows="6" cols="6">
+		<Puzzle index="4" rows="6" cols="6" time="99999">
 			<Row>70 70 20 70 70 70</Row>
 			<Row>70 20 70 70 20 70</Row>
 			<Row>70 70 70 50 70 70</Row>
@@ -34,7 +34,7 @@
 			<Row>70 50 70 70 50 70</Row>
 			<Row>70 70 70 30 70 70</Row>
 		</Puzzle>
-		<Puzzle index="5" rows="6" cols="6">
+		<Puzzle index="5" rows="6" cols="6" time="99999">
 			<Row>50 70 70 70 70 20</Row>
 			<Row>70 10 10 70 50 70</Row>
 			<Row>70 70 70 70 50 70</Row>
@@ -42,7 +42,7 @@
 			<Row>70 50 70 10 50 70</Row>
 			<Row>10 70 70 70 70 10</Row>
 		</Puzzle>
-		<Puzzle index="6" rows="6" cols="6">
+		<Puzzle index="6" rows="6" cols="6" time="99999">
 			<Row>70 70 70 50 70 70</Row>
 			<Row>70 30 70 70 70 50</Row>
 			<Row>70 70 70 50 70 20</Row>
@@ -50,7 +50,7 @@
 			<Row>50 70 70 70 20 70</Row>
 			<Row>70 70 10 70 70 70</Row>
 		</Puzzle>
-		<Puzzle index="7" rows="6" cols="6">
+		<Puzzle index="7" rows="6" cols="6" time="99999">
 			<Row>70 70 70 70 70 50</Row>
 			<Row>70 50 20 10 70 70</Row>
 			<Row>70 70 70 70 70 10</Row>
@@ -58,7 +58,7 @@
 			<Row>70 70 10 50 10 70</Row>
 			<Row>50 70 70 70 70 70</Row>
 		</Puzzle>
-		<Puzzle index="8" rows="6" cols="6">
+		<Puzzle index="8" rows="6" cols="6" time="99999">
 			<Row>70 70 10 50 70 70</Row>
 			<Row>50 70 70 70 70 70</Row>
 			<Row>10 70 70 70 70 50</Row>
@@ -66,7 +66,7 @@
 			<Row>70 70 70 70 70 20</Row>
 			<Row>70 70 50 50 70 70</Row>
 		</Puzzle>
-		<Puzzle index="9" rows="6" cols="6">
+		<Puzzle index="9" rows="6" cols="6" time="99999">
 			<Row>70 70 70 70 50 70</Row>
 			<Row>70 00 70 70 70 70</Row>
 			<Row>70 20 70 70 70 70</Row>
@@ -74,7 +74,7 @@
 			<Row>70 70 70 70 30 70</Row>
 			<Row>70 50 70 70 70 70</Row>
 		</Puzzle>
-		<Puzzle index="10" rows="6" cols="6">
+		<Puzzle index="10" rows="6" cols="6" time="99999">
 			<Row>70 70 20 70 70 70</Row>
 			<Row>70 50 70 50 70 50</Row>
 			<Row>70 30 70 70 70 70</Row>
@@ -82,7 +82,7 @@
 			<Row>10 70 50 70 50 70</Row>
 			<Row>70 70 70 10 70 70</Row>
 		</Puzzle>
-		<Puzzle index="11" rows="6" cols="6">
+		<Puzzle index="11" rows="6" cols="6" time="99999">
 			<Row>50 70 70 70 50 70</Row>
 			<Row>70 70 20 70 70 70</Row>
 			<Row>70 70 70 70 00 50</Row>
@@ -90,7 +90,7 @@
 			<Row>70 70 70 20 70 70</Row>
 			<Row>70 50 70 70 70 20</Row>
 		</Puzzle>
-		<Puzzle index="12" rows="6" cols="6">
+		<Puzzle index="12" rows="6" cols="6" time="99999">
 			<Row>70 70 50 70 70 70</Row>
 			<Row>70 70 70 70 70 70</Row>
 			<Row>50 70 50 10 70 70</Row>
@@ -98,7 +98,7 @@
 			<Row>70 70 70 70 70 70</Row>
 			<Row>70 70 70 50 70 70</Row>
 		</Puzzle>
-		<Puzzle index="13" rows="6" cols="6">
+		<Puzzle index="13" rows="6" cols="6" time="99999">
 			<Row>70 70 50 50 70 70</Row>
 			<Row>70 70 70 70 70 70</Row>
 			<Row>50 70 70 10 70 20</Row>
@@ -106,7 +106,7 @@
 			<Row>70 70 70 70 70 70</Row>
 			<Row>70 70 50 50 70 70</Row>
 		</Puzzle>
-		<Puzzle index="14" rows="6" cols="6">
+		<Puzzle index="14" rows="6" cols="6" time="99999">
 			<Row>50 70 70 70 70 70</Row>
 			<Row>50 70 70 00 70 70</Row>
 			<Row>70 70 50 70 70 50</Row>
@@ -114,7 +114,7 @@
 			<Row>70 70 50 70 70 50</Row>
 			<Row>70 70 70 70 70 50</Row>
 		</Puzzle>
-		<Puzzle index="15" rows="6" cols="6">
+		<Puzzle index="15" rows="6" cols="6" time="99999">
 			<Row>70 70 10 70 70 70</Row>
 			<Row>00 70 70 70 10 70</Row>
 			<Row>50 70 50 70 70 70</Row>
@@ -122,7 +122,7 @@
 			<Row>70 10 70 70 70 20</Row>
 			<Row>70 70 70 10 70 70</Row>
 		</Puzzle>
-		<Puzzle index="16" rows="6" cols="6">
+		<Puzzle index="16" rows="6" cols="6" time="99999">
 			<Row>70 50 70 70 70 70</Row>
 			<Row>70 70 70 20 70 50</Row>
 			<Row>70 00 50 70 70 70</Row>
@@ -130,7 +130,7 @@
 			<Row>30 70 50 70 70 70</Row>
 			<Row>70 70 70 70 50 70</Row>
 		</Puzzle>
-		<Puzzle index="17" rows="6" cols="6">
+		<Puzzle index="17" rows="6" cols="6" time="99999">
 			<Row>70 70 70 10 70 70</Row>
 			<Row>50 70 10 70 70 10</Row>
 			<Row>70 70 70 70 50 70</Row>
@@ -138,7 +138,7 @@
 			<Row>10 70 70 20 70 50</Row>
 			<Row>70 70 30 70 70 70</Row>
 		</Puzzle>
-		<Puzzle index="18" rows="6" cols="6">
+		<Puzzle index="18" rows="6" cols="6" time="99999">
 			<Row>70 70 70 50 70 00</Row>
 			<Row>00 50 70 70 70 70</Row>
 			<Row>70 70 70 10 70 10</Row>
@@ -146,7 +146,7 @@
 			<Row>70 70 70 70 10 20</Row>
 			<Row>50 70 50 70 70 70</Row>
 		</Puzzle>
-		<Puzzle index="19" rows="6" cols="6">
+		<Puzzle index="19" rows="6" cols="6" time="99999">
 			<Row>70 70 70 00 70 70</Row>
 			<Row>10 70 70 70 00 70</Row>
 			<Row>10 70 50 70 70 70</Row>
@@ -154,7 +154,7 @@
 			<Row>70 50 70 70 70 00</Row>
 			<Row>70 70 10 70 70 70</Row>
 		</Puzzle>
-		<Puzzle index="20" rows="6" cols="6">
+		<Puzzle index="20" rows="6" cols="6" time="99999">
 			<Row>70 70 70 70 70 70</Row>
 			<Row>70 20 70 70 50 70</Row>
 			<Row>70 70 70 20 70 70</Row>
@@ -165,7 +165,7 @@
 	</Practice>
 	<Easy>
 		<Count value="20" />
-		<Puzzle index="1" rows="10" cols="10">
+		<Puzzle index="1" rows="10" cols="10" time="99999">
 			<Row>20 70 70 70 70 50 70 70 70 70</Row>
 			<Row>70 70 70 70 70 70 70 50 70 70</Row>
 			<Row>70 70 50 70 70 70 70 70 70 70</Row>
@@ -177,7 +177,7 @@
 			<Row>70 70 00 70 70 70 70 70 70 70</Row>
 			<Row>70 70 70 70 30 70 70 70 70 50</Row>
 		</Puzzle>
-		<Puzzle index="2" rows="10" cols="10">
+		<Puzzle index="2" rows="10" cols="10" time="99999">
 			<Row>70 70 70 70 70 70 70 70 50 50</Row>
 			<Row>70 10 50 10 70 70 70 70 70 50</Row>
 			<Row>70 30 70 70 70 70 50 70 70 50</Row>
@@ -189,7 +189,7 @@
 			<Row>50 70 70 70 70 70 10 50 10 70</Row>
 			<Row>50 50 70 70 70 70 70 70 70 70</Row>
 		</Puzzle>
-		<Puzzle index="3" rows="10" cols="10">
+		<Puzzle index="3" rows="10" cols="10" time="99999">
 			<Row>10 50 70 70 70 70 70 70 70 10</Row>
 			<Row>70 70 70 50 20 70 70 70 70 70</Row>
 			<Row>70 70 70 70 70 70 10 50 70 70</Row>
@@ -201,7 +201,7 @@
 			<Row>70 70 70 70 70 50 50 70 70 70</Row>
 			<Row>10 70 70 70 70 70 70 70 10 50</Row>
 		</Puzzle>
-		<Puzzle index="4" rows="10" cols="10">
+		<Puzzle index="4" rows="10" cols="10" time="99999">
 			<Row>70 70 70 70 70 70 70 50 70 70</Row>
 			<Row>70 70 10 70 70 70 70 70 70 70</Row>
 			<Row>70 70 70 70 70 50 70 70 70 70</Row>
@@ -213,7 +213,7 @@
 			<Row>70 70 70 70 70 70 70 10 70 70</Row>
 			<Row>70 70 10 70 70 70 70 70 70 70</Row>
 		</Puzzle>
-		<Puzzle index="5" rows="10" cols="10">
+		<Puzzle index="5" rows="10" cols="10" time="99999">
 			<Row>70 70 70 10 70 70 70 70 70 70</Row>
 			<Row>70 70 70 70 70 70 50 70 70 70</Row>
 			<Row>70 70 70 70 70 10 70 70 70 70</Row>
@@ -225,7 +225,7 @@
 			<Row>70 70 70 10 70 70 70 70 70 70</Row>
 			<Row>70 70 70 70 70 70 00 70 70 70</Row>
 		</Puzzle>
-		<Puzzle index="6" rows="10" cols="10">
+		<Puzzle index="6" rows="10" cols="10" time="99999">
 			<Row>50 70 70 70 70 30 70 70 70 10</Row>
 			<Row>70 70 70 50 70 70 70 50 70 70</Row>
 			<Row>70 70 70 70 50 50 10 70 70 70</Row>
@@ -237,7 +237,7 @@
 			<Row>70 70 10 70 70 70 10 70 70 70</Row>
 			<Row>20 70 70 70 50 70 70 70 70 10</Row>
 		</Puzzle>
-		<Puzzle index="7" rows="10" cols="10">
+		<Puzzle index="7" rows="10" cols="10" time="99999">
 			<Row>10 70 70 70 50 70 70 70 70 50</Row>
 			<Row>70 70 70 70 10 70 70 70 70 70</Row>
 			<Row>70 70 50 50 10 70 70 10 70 70</Row>
@@ -249,7 +249,7 @@
 			<Row>70 70 70 70 70 50 70 70 70 70</Row>
 			<Row>20 70 70 70 70 50 70 70 70 50</Row>
 		</Puzzle>
-		<Puzzle index="8" rows="10" cols="10">
+		<Puzzle index="8" rows="10" cols="10" time="99999">
 			<Row>70 70 70 10 10 70 70 70 70 10</Row>
 			<Row>70 70 70 70 70 70 70 70 70 70</Row>
 			<Row>70 10 10 70 70 70 70 70 70 70</Row>
@@ -261,7 +261,7 @@
 			<Row>70 70 70 70 70 70 70 70 70 70</Row>
 			<Row>00 70 70 70 70 10 00 70 70 70</Row>
 		</Puzzle>
-		<Puzzle index="9" rows="10" cols="10">
+		<Puzzle index="9" rows="10" cols="10" time="99999">
 			<Row>20 70 50 70 70 70 70 50 70 70</Row>
 			<Row>70 70 70 70 70 10 70 70 70 70</Row>
 			<Row>70 50 70 20 70 70 70 70 20 70</Row>
@@ -273,7 +273,7 @@
 			<Row>70 70 70 70 20 70 70 70 70 70</Row>
 			<Row>70 70 30 70 70 70 70 10 70 50</Row>
 		</Puzzle>
-		<Puzzle index="10" rows="10" cols="10">
+		<Puzzle index="10" rows="10" cols="10" time="99999">
 			<Row>70 70 70 70 10 70 70 70 70 10</Row>
 			<Row>10 70 70 70 50 70 50 70 70 70</Row>
 			<Row>70 70 30 70 70 70 70 10 70 70</Row>
@@ -285,7 +285,7 @@
 			<Row>70 70 70 50 70 50 70 70 70 20</Row>
 			<Row>10 70 70 70 70 20 70 70 70 70</Row>
 		</Puzzle>
-		<Puzzle index="11" rows="10" cols="10">
+		<Puzzle index="11" rows="10" cols="10" time="99999">
 			<Row>50 70 70 70 70 70 50 50 50 70</Row>
 			<Row>50 50 30 70 70 70 10 70 70 70</Row>
 			<Row>10 50 70 70 70 70 70 70 70 70</Row>
@@ -297,7 +297,7 @@
 			<Row>70 70 70 20 70 70 70 50 50 50</Row>
 			<Row>70 10 50 50 70 70 70 70 70 50</Row>
 		</Puzzle>
-		<Puzzle index="12" rows="10" cols="10">
+		<Puzzle index="12" rows="10" cols="10" time="99999">
 			<Row>70 70 50 70 70 70 10 70 70 70</Row>
 			<Row>70 70 70 70 00 70 70 70 70 70</Row>
 			<Row>70 70 70 70 70 70 70 70 10 70</Row>
@@ -309,7 +309,7 @@
 			<Row>70 70 70 70 70 10 70 70 70 70</Row>
 			<Row>70 70 70 50 70 70 70 30 70 70</Row>
 		</Puzzle>
-		<Puzzle index="13" rows="10" cols="10">
+		<Puzzle index="13" rows="10" cols="10" time="99999">
 			<Row>50 70 70 70 70 50 70 70 10 50</Row>
 			<Row>70 70 70 20 70 70 70 70 70 10</Row>
 			<Row>70 70 00 50 70 70 20 50 70 70</Row>
@@ -321,7 +321,7 @@
 			<Row>50 70 70 70 70 70 50 70 70 70</Row>
 			<Row>50 50 70 70 50 70 70 70 70 20</Row>
 		</Puzzle>
-		<Puzzle index="14" rows="10" cols="10">
+		<Puzzle index="14" rows="10" cols="10" time="99999">
 			<Row>20 70 70 70 50 70 70 70 70 50</Row>
 			<Row>70 30 70 70 70 70 70 70 30 70</Row>
 			<Row>70 70 70 70 00 70 70 70 70 70</Row>
@@ -333,7 +333,7 @@
 			<Row>70 40 70 70 70 70 70 70 20 70</Row>
 			<Row>50 70 70 70 70 50 70 70 70 50</Row>
 		</Puzzle>
-		<Puzzle index="15" rows="10" cols="10">
+		<Puzzle index="15" rows="10" cols="10" time="99999">
 			<Row>70 70 70 70 70 70 20 70 70 70</Row>
 			<Row>70 70 40 70 70 20 70 70 70 70</Row>
 			<Row>70 70 70 50 70 70 70 50 70 10</Row>
@@ -345,7 +345,7 @@
 			<Row>70 70 70 70 50 70 70 10 70 70</Row>
 			<Row>70 70 70 20 70 70 70 70 70 70</Row>
 		</Puzzle>
-		<Puzzle index="16" rows="10" cols="10">
+		<Puzzle index="16" rows="10" cols="10" time="99999">
 			<Row>70 70 70 50 70 70 70 50 70 70</Row>
 			<Row>70 70 70 70 70 70 70 70 70 70</Row>
 			<Row>70 70 70 70 70 10 70 70 70 20</Row>
@@ -357,7 +357,7 @@
 			<Row>70 70 70 70 70 70 70 70 70 70</Row>
 			<Row>70 70 50 70 70 70 30 70 70 70</Row>
 		</Puzzle>
-		<Puzzle index="17" rows="10" cols="10">
+		<Puzzle index="17" rows="10" cols="10" time="99999">
 			<Row>50 70 70 70 70 70 70 70 70 50</Row>
 			<Row>70 20 70 70 70 00 70 70 10 70</Row>
 			<Row>70 70 40 70 70 70 70 10 70 70</Row>
@@ -369,7 +369,7 @@
 			<Row>70 50 70 70 50 70 70 70 50 70</Row>
 			<Row>10 70 70 70 70 70 70 70 70 20</Row>
 		</Puzzle>
-		<Puzzle index="18" rows="10" cols="10">
+		<Puzzle index="18" rows="10" cols="10" time="99999">
 			<Row>70 70 70 70 70 70 50 70 70 70</Row>
 			<Row>70 70 70 40 70 70 70 70 10 70</Row>
 			<Row>70 70 70 70 70 10 70 70 70 70</Row>
@@ -381,7 +381,7 @@
 			<Row>70 50 70 70 70 70 20 70 70 70</Row>
 			<Row>70 70 70 50 70 70 70 70 70 70</Row>
 		</Puzzle>
-		<Puzzle index="19" rows="10" cols="10">
+		<Puzzle index="19" rows="10" cols="10" time="99999">
 			<Row>70 70 70 50 70 70 70 10 70 70</Row>
 			<Row>70 40 70 70 70 30 70 70 70 70</Row>
 			<Row>70 70 70 70 10 70 70 70 70 70</Row>
@@ -393,7 +393,7 @@
 			<Row>70 70 70 70 50 70 70 70 20 70</Row>
 			<Row>70 70 10 70 70 70 30 70 70 70</Row>
 		</Puzzle>
-		<Puzzle index="20" rows="10" cols="10">
+		<Puzzle index="20" rows="10" cols="10" time="99999">
 			<Row>70 70 70 70 70 70 50 70 70 10</Row>
 			<Row>70 70 70 40 70 70 50 70 70 70</Row>
 			<Row>70 50 50 70 70 70 70 70 70 70</Row>
@@ -408,7 +408,7 @@
 	</Easy>
 	<Normal>
 		<Count value="20" />
-		<Puzzle index="1" rows="10" cols="10">
+		<Puzzle index="1" rows="10" cols="10" time="99999">
 			<Row>70 00 50 70 70 70 70 50 00 70</Row>
 			<Row>70 70 70 00 70 00 70 70 70 70</Row>
 			<Row>70 50 70 70 70 50 50 70 50 70</Row>
@@ -420,7 +420,7 @@
 			<Row>70 70 70 70 00 70 50 70 70 70</Row>
 			<Row>70 50 00 70 70 70 70 00 50 70</Row>
 		</Puzzle>
-		<Puzzle index="2" rows="10" cols="10">
+		<Puzzle index="2" rows="10" cols="10" time="99999">
 			<Row>70 70 70 30 70 70 70 20 70 70</Row>
 			<Row>70 70 50 70 70 70 10 70 70 70</Row>
 			<Row>70 10 70 70 70 50 70 70 70 50</Row>
@@ -432,7 +432,7 @@
 			<Row>70 70 70 10 70 70 70 50 70 70</Row>
 			<Row>70 70 10 70 70 70 20 70 70 70</Row>
 		</Puzzle>
-		<Puzzle index="3" rows="10" cols="10">
+		<Puzzle index="3" rows="10" cols="10" time="99999">
 			<Row>70 70 70 70 70 70 70 70 70 70</Row>
 			<Row>70 70 70 30 70 70 00 70 70 70</Row>
 			<Row>70 70 70 50 70 70 00 70 70 70</Row>
@@ -444,7 +444,7 @@
 			<Row>70 70 70 10 70 70 00 70 70 70</Row>
 			<Row>70 70 70 70 70 70 70 70 70 70</Row>
 		</Puzzle>
-		<Puzzle index="4" rows="10" cols="10">
+		<Puzzle index="4" rows="10" cols="10" time="99999">
 			<Row>70 70 70 70 70 10 70 70 70 70</Row>
 			<Row>70 70 70 70 00 70 70 70 70 00</Row>
 			<Row>10 70 10 70 70 70 70 50 70 70</Row>
@@ -456,7 +456,7 @@
 			<Row>50 70 70 70 70 10 70 70 70 70</Row>
 			<Row>70 70 70 70 20 70 70 70 70 70</Row>
 		</Puzzle>
-		<Puzzle index="5" rows="10" cols="10">
+		<Puzzle index="5" rows="10" cols="10" time="99999">
 			<Row>70 70 50 70 70 00 70 70 10 70</Row>
 			<Row>00 70 70 50 70 70 70 50 70 70</Row>
 			<Row>70 00 70 70 70 50 70 70 70 50</Row>
@@ -468,7 +468,7 @@
 			<Row>70 70 10 70 70 70 20 70 70 10</Row>
 			<Row>70 20 70 70 10 70 70 20 70 70</Row>
 		</Puzzle>
-		<Puzzle index="6" rows="10" cols="10">
+		<Puzzle index="6" rows="10" cols="10" time="99999">
 			<Row>50 70 70 70 70 10 70 70 70 10</Row>
 			<Row>70 70 70 70 70 70 70 70 70 70</Row>
 			<Row>70 70 70 20 70 70 70 50 70 70</Row>
@@ -480,7 +480,7 @@
 			<Row>70 70 70 70 70 70 70 70 70 70</Row>
 			<Row>50 70 70 70 20 70 70 70 70 50</Row>
 		</Puzzle>
-		<Puzzle index="7" rows="10" cols="10">
+		<Puzzle index="7" rows="10" cols="10" time="99999">
 			<Row>70 70 70 70 10 70 70 70 70 50</Row>
 			<Row>70 70 00 70 70 70 70 00 70 70</Row>
 			<Row>10 70 70 70 70 50 70 70 70 70</Row>
@@ -492,7 +492,7 @@
 			<Row>70 70 10 70 70 70 70 20 70 70</Row>
 			<Row>20 70 70 70 70 50 70 70 70 70</Row>
 		</Puzzle>
-		<Puzzle index="8" rows="10" cols="10">
+		<Puzzle index="8" rows="10" cols="10" time="99999">
 			<Row>20 70 70 70 70 70 70 70 70 50</Row>
 			<Row>70 70 70 70 50 70 50 70 70 70</Row>
 			<Row>70 50 70 70 70 10 70 70 70 70</Row>
@@ -504,7 +504,7 @@
 			<Row>70 70 70 10 70 50 70 70 70 70</Row>
 			<Row>50 70 70 70 70 70 70 70 70 50</Row>
 		</Puzzle>
-		<Puzzle index="9" rows="10" cols="10">
+		<Puzzle index="9" rows="10" cols="10" time="99999">
 			<Row>70 70 70 30 70 70 70 70 70 70</Row>
 			<Row>70 70 70 70 30 70 70 00 70 70</Row>
 			<Row>70 70 70 70 70 70 70 70 50 70</Row>
@@ -516,7 +516,7 @@
 			<Row>70 70 10 70 70 10 70 70 70 70</Row>
 			<Row>70 70 70 70 70 70 20 70 70 70</Row>
 		</Puzzle>
-		<Puzzle index="10" rows="10" cols="10">
+		<Puzzle index="10" rows="10" cols="10" time="99999">
 			<Row>70 70 70 70 70 70 70 70 70 70</Row>
 			<Row>70 70 50 50 70 70 70 00 70 70</Row>
 			<Row>70 50 70 70 70 70 70 70 10 70</Row>
@@ -528,7 +528,7 @@
 			<Row>70 70 10 70 70 70 10 10 70 70</Row>
 			<Row>70 70 70 70 70 70 70 70 70 70</Row>
 		</Puzzle>
-		<Puzzle index="11" rows="10" cols="10">
+		<Puzzle index="11" rows="10" cols="10" time="99999">
 			<Row>50 70 70 70 70 50 70 70 70 70</Row>
 			<Row>70 70 70 30 70 70 70 70 40 70</Row>
 			<Row>70 10 70 70 70 70 70 50 70 70</Row>
@@ -540,7 +540,7 @@
 			<Row>70 20 70 70 70 70 50 70 70 70</Row>
 			<Row>70 70 70 70 50 70 70 70 70 10</Row>
 		</Puzzle>
-		<Puzzle index="12" rows="10" cols="10">
+		<Puzzle index="12" rows="10" cols="10" time="99999">
 			<Row>20 70 70 50 70 70 50 70 70 50</Row>
 			<Row>70 70 70 70 70 70 70 70 70 70</Row>
 			<Row>70 50 70 70 70 70 70 70 20 70</Row>
@@ -552,7 +552,7 @@
 			<Row>70 70 70 70 70 70 70 70 70 70</Row>
 			<Row>50 70 70 50 70 70 10 70 70 50</Row>
 		</Puzzle>
-		<Puzzle index="13" rows="10" cols="10">
+		<Puzzle index="13" rows="10" cols="10" time="99999">
 			<Row>10 70 70 70 70 70 70 70 70 10</Row>
 			<Row>70 70 70 50 70 70 70 70 70 70</Row>
 			<Row>70 70 10 70 70 70 10 50 70 70</Row>
@@ -564,7 +564,7 @@
 			<Row>70 70 70 70 70 70 50 70 70 70</Row>
 			<Row>10 70 70 70 70 70 70 70 70 10</Row>
 		</Puzzle>
-		<Puzzle index="14" rows="10" cols="10">
+		<Puzzle index="14" rows="10" cols="10" time="99999">
 			<Row>70 50 70 70 50 50 70 70 70 70</Row>
 			<Row>70 70 70 50 70 70 50 70 70 00</Row>
 			<Row>70 70 70 70 70 70 70 70 70 70</Row>
@@ -576,7 +576,7 @@
 			<Row>10 70 70 50 70 70 10 70 70 70</Row>
 			<Row>70 70 70 70 50 50 70 70 20 70</Row>
 		</Puzzle>
-		<Puzzle index="15" rows="10" cols="10">
+		<Puzzle index="15" rows="10" cols="10" time="99999">
 			<Row>70 70 70 70 70 70 70 70 70 70</Row>
 			<Row>70 70 70 70 30 70 70 70 70 70</Row>
 			<Row>70 70 70 10 70 70 10 70 70 70</Row>
@@ -588,7 +588,7 @@
 			<Row>70 70 70 70 70 20 70 70 70 70</Row>
 			<Row>70 70 70 70 70 70 70 70 70 70</Row>
 		</Puzzle>
-		<Puzzle index="16" rows="10" cols="10">
+		<Puzzle index="16" rows="10" cols="10" time="99999">
 			<Row>70 70 70 70 70 20 70 70 70 70</Row>
 			<Row>70 70 00 70 50 70 70 70 50 70</Row>
 			<Row>70 50 70 70 70 70 70 50 70 70</Row>
@@ -600,7 +600,7 @@
 			<Row>70 10 70 70 70 50 70 20 70 70</Row>
 			<Row>70 70 70 70 50 70 70 70 70 70</Row>
 		</Puzzle>
-		<Puzzle index="17" rows="10" cols="10">
+		<Puzzle index="17" rows="10" cols="10" time="99999">
 			<Row>70 70 70 70 70 30 70 70 70 70</Row>
 			<Row>70 00 70 50 70 70 70 00 70 70</Row>
 			<Row>70 70 70 70 70 50 70 70 50 70</Row>
@@ -612,7 +612,7 @@
 			<Row>70 70 20 70 70 70 10 70 30 70</Row>
 			<Row>70 70 70 70 50 70 70 70 70 70</Row>
 		</Puzzle>
-		<Puzzle index="18" rows="10" cols="10">
+		<Puzzle index="18" rows="10" cols="10" time="99999">
 			<Row>10 70 70 70 70 50 70 70 70 70</Row>
 			<Row>70 70 70 10 70 70 70 70 20 70</Row>
 			<Row>70 70 10 70 70 70 70 30 70 70</Row>
@@ -624,7 +624,7 @@
 			<Row>70 30 70 70 70 70 20 70 70 70</Row>
 			<Row>70 70 70 70 10 70 70 70 70 50</Row>
 		</Puzzle>
-		<Puzzle index="19" rows="10" cols="10">
+		<Puzzle index="19" rows="10" cols="10" time="99999">
 			<Row>70 70 70 00 70 70 70 70 50 70</Row>
 			<Row>50 70 70 70 70 40 70 70 70 70</Row>
 			<Row>70 70 10 70 70 70 70 10 70 70</Row>
@@ -636,7 +636,7 @@
 			<Row>70 70 70 70 00 70 70 70 70 00</Row>
 			<Row>70 10 70 70 70 70 00 70 70 70</Row>
 		</Puzzle>
-		<Puzzle index="20" rows="10" cols="10">
+		<Puzzle index="20" rows="10" cols="10" time="99999">
 			<Row>50 70 70 70 10 70 70 70 70 10</Row>
 			<Row>70 70 70 70 70 20 70 70 70 70</Row>
 			<Row>70 70 70 70 70 70 70 70 70 70</Row>
