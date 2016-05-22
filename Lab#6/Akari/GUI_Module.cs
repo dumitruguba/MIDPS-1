@@ -100,6 +100,7 @@ namespace Akari
              LoadStage();
              back_to_problems.Show();
              reset_button.Show();
+             undo_button.Show();
              timer1.Start();
              time_label.Show();
          }
@@ -169,14 +170,24 @@ namespace Akari
          private void btnGame_Click(object sender, EventArgs e)
          {
              MyButton button = (MyButton)sender;
+
+             if (button.Text == "•")
+                 SetMove(button._i, button._j, 2);
+             else
+                 SetMove(button._i, button._j, 0);
+
              ClickOnButton(button._i, button._j);
+
              if (HasWon())
              {
                  if (time_contor < GetTime(difficulty, problem_index))
                      SetTime(difficulty, problem_index, time_contor);
 
                  timer1.Stop();
-                 
+
+                 reset_button.Enabled = false;
+                 undo_button.Enabled = false;
+
                  for (int i = 0; i < puzzle_rows; i++)
                  {
                      for (int j = 0; j < puzzle_columns; j++)
@@ -187,22 +198,29 @@ namespace Akari
                  }
              }
          }
-		 
-		 private void btnGame_RightClick(object sender, MouseEventArgs e)
-		 {
-		    MyButton button = (MyButton)sender;
-		    if (e.Button == MouseButtons.Right && puzzle_matrix[button._i, button._j] / 10 == 7)
-		    {
-			 	 if (button.Text == "")
-				 {
-                     button.Text = "●";//·■•●▪
-				 }
-                 else if (button.Text == "●") //·■•●▪
-				 {
-					  button.Text = "";
-				 }
-		    }
-		 }
+
+         private void btnGame_RightClick(object sender, MouseEventArgs e)
+         {
+             MyButton button = (MyButton)sender;
+
+             if (e.Button == MouseButtons.Right && puzzle_matrix[button._i, button._j] / 10 == 7)
+             {
+                 SetMove(button._i, button._j, 1);
+                 SetPoint(button);
+             }
+         }
+
+         private void SetPoint(MyButton button)
+         {
+             if (button.Text == "")
+             {
+                 button.Text = "•";
+             }
+             else if (button.Text == "•")
+             {
+                 button.Text = "";
+             }
+         }
 
          private void UpdateButton(int k, int p)
          {
@@ -265,7 +283,10 @@ namespace Akari
              label.Hide();
              problems_panel.Show();
              back_to_problems.Hide();
+             reset_button.Enabled = true;
              reset_button.Hide();
+             undo_button.Enabled = true;
+             undo_button.Hide();
              time_label.Hide();
              time_label.Text = "00:00:00";
              time_contor = 0;
@@ -294,6 +315,11 @@ namespace Akari
          private void reset_btn_Click(object sender, EventArgs e)
          {
              ResetPuzzle();
+         }
+
+         private void undo_btn_click(object sender, EventArgs e)
+         {
+             UndoMove();
          }
 
          int time_contor = 0;
