@@ -28,12 +28,17 @@
           /// </summary>
           private void InitializeComponent()
           {
+            this.components = new System.ComponentModel.Container();
             this.menu_panel = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.problems_panel = new System.Windows.Forms.Panel();
+            this.back_to_menu = new System.Windows.Forms.Button();
             this.stage_panel = new System.Windows.Forms.Panel();
+            this.back_to_problems = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.time_label = new System.Windows.Forms.Label();
             this.menu_panel.SuspendLayout();
             this.problems_panel.SuspendLayout();
             this.stage_panel.SuspendLayout();
@@ -93,19 +98,65 @@
             // 
             // problems_panel
             // 
+            this.problems_panel.Controls.Add(this.back_to_menu);
             this.problems_panel.Controls.Add(this.menu_panel);
             this.problems_panel.Location = new System.Drawing.Point(11, 11);
             this.problems_panel.Name = "problems_panel";
             this.problems_panel.Size = new System.Drawing.Size(401, 372);
             this.problems_panel.TabIndex = 1;
             // 
+            // back_to_menu
+            // 
+            this.back_to_menu.FlatAppearance.BorderSize = 0;
+            this.back_to_menu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.back_to_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.back_to_menu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.back_to_menu.Location = new System.Drawing.Point(18, 319);
+            this.back_to_menu.Name = "back_to_menu";
+            this.back_to_menu.Size = new System.Drawing.Size(75, 30);
+            this.back_to_menu.TabIndex = 3;
+            this.back_to_menu.Text = "Back";
+            this.back_to_menu.UseVisualStyleBackColor = true;
+            this.back_to_menu.Click += new System.EventHandler(this.back_to_menu_button_Click);
+            // 
             // stage_panel
             // 
+            this.stage_panel.Controls.Add(this.time_label);
+            this.stage_panel.Controls.Add(this.back_to_problems);
             this.stage_panel.Controls.Add(this.problems_panel);
             this.stage_panel.Location = new System.Drawing.Point(1, 1);
             this.stage_panel.Name = "stage_panel";
             this.stage_panel.Size = new System.Drawing.Size(424, 395);
             this.stage_panel.TabIndex = 2;
+            // 
+            // back_to_problems
+            // 
+            this.back_to_problems.FlatAppearance.BorderSize = 0;
+            this.back_to_problems.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightGray;
+            this.back_to_problems.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.back_to_problems.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.back_to_problems.Location = new System.Drawing.Point(11, 353);
+            this.back_to_problems.Name = "back_to_problems";
+            this.back_to_problems.Size = new System.Drawing.Size(75, 30);
+            this.back_to_problems.TabIndex = 4;
+            this.back_to_problems.Text = "Back";
+            this.back_to_problems.UseVisualStyleBackColor = true;
+            this.back_to_problems.Click += new System.EventHandler(this.back_to_problems_button_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // time_label
+            // 
+            this.time_label.AutoSize = true;
+            this.time_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.time_label.ForeColor = System.Drawing.Color.SteelBlue;
+            this.time_label.Location = new System.Drawing.Point(184, 8);
+            this.time_label.Name = "time_label";
+            this.time_label.Size = new System.Drawing.Size(0, 15);
+            this.time_label.TabIndex = 5;
             // 
             // Form1
             // 
@@ -119,6 +170,7 @@
             this.menu_panel.ResumeLayout(false);
             this.problems_panel.ResumeLayout(false);
             this.stage_panel.ResumeLayout(false);
+            this.stage_panel.PerformLayout();
             this.ResumeLayout(false);
 
           }
@@ -131,6 +183,10 @@
           private System.Windows.Forms.Button button1;
           private System.Windows.Forms.Panel problems_panel;
           private System.Windows.Forms.Panel stage_panel;
+          private System.Windows.Forms.Button back_to_menu;
+          private System.Windows.Forms.Button back_to_problems;
+          private System.Windows.Forms.Timer timer1;
+          private System.Windows.Forms.Label time_label;
 
 
      }

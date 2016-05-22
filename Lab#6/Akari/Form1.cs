@@ -25,12 +25,15 @@ namespace Akari
                button1.BackColor = Color.LightGray;
                button2.BackColor = Color.LightGray;
                button3.BackColor = Color.LightGray;
+               back_to_menu.BackColor = Color.LightGray;
+               back_to_menu.Hide();
+               back_to_problems.BackColor = Color.LightGray;
+               back_to_problems.Hide();
           }
 
           private void Form1_Load(object sender, EventArgs e)
           {
               GetPuzzleCount();
           }
-
      }
 }
