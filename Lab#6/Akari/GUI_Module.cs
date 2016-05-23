@@ -290,6 +290,7 @@ namespace Akari
              time_label.Hide();
              time_label.Text = "00:00:00";
              time_contor = 0;
+             moves.Clear();
 
              if (!HasWon())
              {
