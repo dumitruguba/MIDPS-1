@@ -365,9 +365,16 @@ namespace Akari
                               puzzle_matrix[i, j] = (puzzle_matrix[i, j] / 10) * 10;
                          }
 
+                         if (btnStage[i, j].Text == "•")
+                         {
+                              btnStage[i, j].Text = "";
+                         }
+
                          UpdateButton(i, j);
                     }
                }
+
+               moves.Clear();
           }
           
           private int GetTime(string difficulty, string index)
